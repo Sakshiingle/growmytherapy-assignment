@@ -1,7 +1,7 @@
-'use client';
+"use client";
 // Needed because this page runs in the browser
 
-import Image from 'next/image';
+import Image from "next/image";
 // Next.js optimized image component
 
 export default function Home() {
@@ -20,9 +20,7 @@ export default function Home() {
         "
       >
         {/* Site name */}
-        <h1 className="text-2xl font-serif">
-          Lilac Template
-        </h1>
+        <h1 className="text-2xl font-serif">Lilac Template</h1>
 
         {/* Header links as per template */}
         <div className="flex gap-8 text-sm">
@@ -48,16 +46,11 @@ export default function Home() {
         {/* LEFT SIDE: Image */}
         <div className="md:w-1/2 w-full">
           <Image
-            src="https://images.unsplash.com/photo-1516979187457-637a1ec33f8b"
+            src="/Hero.jpg" 
             alt="Therapy flower"
             width={600}
             height={600}
-            className="
-              rounded-[300px]   /* big oval shape like template */
-              object-cover
-              w-full
-              h-auto
-            "
+            className=" rounded-[300px]    // big oval like template object-cover w-full h-auto"
           />
         </div>
 
