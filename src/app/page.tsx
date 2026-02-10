@@ -400,6 +400,66 @@ export default function Home() {
     />
 
   </div>
+
+</section>
+  
+    {/* GET STARTED TODAY SECTION */}
+<section className="bg-[#7a7745] py-28 text-center">
+  {/* 
+    bg-[#7a7745]  → olive green background (same feel as template)
+    py-28        → top & bottom padding (creates height like template)
+    text-center  → center align all text
+  */}
+
+  <div className="max-w-3xl mx-auto px-6">
+    {/* 
+      max-w-3xl → keeps content narrow (not full screen wide)
+      mx-auto   → centers the block horizontally
+      px-6      → side padding for mobile safety
+    */}
+
+    <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
+      {/* 
+        text-4xl / md:text-5xl → responsive heading size
+        font-semibold         → strong but soft heading
+        text-white            → white text on olive background
+        mb-6                  → space below heading
+      */}
+      Get started today.
+    </h2>
+
+    <p className="text-white/90 text-lg leading-relaxed mb-10">
+      {/* 
+        text-white/90  → slightly softer white for readability
+        text-lg        → readable paragraph size
+        leading-relaxed→ comfortable line spacing
+        mb-10          → space before button
+      */}
+      Ready to take the first step towards a happier, healthier you?
+      Contact me to book your first session. I look forward to starting
+      this therapeutic journey with you.
+    </p>
+
+    <a
+      href="/contact"
+      className="inline-flex items-center gap-2 border border-white text-white px-8 py-4 uppercase text-sm tracking-wide hover:bg-white hover:text-[#7a7745] transition"
+    >
+      {/* 
+        inline-flex        → button fits content
+        items-center       → vertically center text + arrow
+        gap-2              → space between text and arrow
+        border border-white→ white outline button
+        px-8 py-4          → button size
+        uppercase          → matches template style
+        tracking-wide      → spaced letters
+        hover:bg-white     → hover fill
+        hover:text[...]    → olive text on hover
+        transition         → smooth hover animation
+      */}
+      Get in touch →
+    </a>
+
+  </div>
 </section>
 
 
