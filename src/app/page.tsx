@@ -139,6 +139,150 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* SECTION: My Specialties */}
+      <section
+        // Same light background used in the template
+        className="bg-[#f6f1eb] py-24"
+      >
+        {/* Main container to center content */}
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Section Heading */}
+          <h2
+            // Large serif heading centered
+            className="text-4xl md:text-5xl font-serif text-center text-[#2f3e2f] mb-16"
+          >
+            My Specialties
+          </h2>
+
+          {/* 3-column layout for cards */}
+          <div className="grid md:grid-cols-3 gap-10">
+            {/* CARD 1 */}
+            <div className="border border-[#2f3e2f] p-8 flex flex-col">
+              {/* Card title */}
+              <h3 className="text-xl font-semibold text-[#2f3e2f] mb-4">
+                Self-Esteem
+              </h3>
+
+              {/* Card description */}
+              <p className="text-gray-700 mb-10">
+                Building a strong sense of self-worth is key to living a
+                fulfilled life. Let's work together to bolster your self-esteem.
+              </p>
+
+              {/* Circular image */}
+              <div className="mt-auto flex justify-center">
+                <div className="relative w-56 h-56 rounded-full overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70"
+                    alt="Self-esteem support"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* CARD 2 */}
+            <div className="border border-[#2f3e2f] p-8 flex flex-col">
+              <h3 className="text-xl font-semibold text-[#2f3e2f] mb-4">
+                Relationships
+              </h3>
+
+              <p className="text-gray-700 mb-10">
+                Navigating relationships can be complex. I'm here to guide you
+                through these complexities to help you form healthier
+                connections.
+              </p>
+
+              <div className="mt-auto flex justify-center">
+                <div className="relative w-56 h-56 rounded-full overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                    alt="Relationships therapy"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* CARD 3 */}
+            <div className="border border-[#2f3e2f] p-8 flex flex-col">
+              <h3 className="text-xl font-semibold text-[#2f3e2f] mb-4">
+                Burnout
+              </h3>
+
+              <p className="text-gray-700 mb-10">
+                Feeling overwhelmed by your career is more common than you
+                think. Together, we'll identify strategies to manage and prevent
+                burnout.
+              </p>
+
+              <div className="mt-auto flex justify-center">
+                <div className="relative w-56 h-56 rounded-full overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
+                    alt="Burnout recovery"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SUPPORT SECTION — You don’t have to do this alone */}
+      <section className="bg-[#d6d3db] py-24">
+        {/* Wrapper to keep content centered */}
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+          {/* LEFT: Image */}
+          <div className="md:w-1/2 w-full">
+            <Image
+              src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca"
+              alt="Person finding calm"
+              width={600}
+              height={700}
+              className="rounded-lg object-cover"
+            />
+          </div>
+
+          {/* RIGHT: Text Content */}
+          <div className="md:w-1/2 w-full text-gray-800">
+            {/* Section heading */}
+            <h2 className="text-4xl font-serif font-bold mb-6">
+              You don’t have to do this all alone.
+            </h2>
+
+            {/* Intro line */}
+            <p className="mb-6">
+              If you are facing any of these, there’s hope:
+            </p>
+
+            {/* Bullet list */}
+            <ul className="space-y-3 mb-8 list-disc list-inside">
+              <li>Persistent feelings of sadness or hopelessness</li>
+              <li>Trouble focusing or making decisions</li>
+              <li>Difficulty maintaining relationships</li>
+              <li>Feeling constantly exhausted or unmotivated</li>
+              <li>A pervasive sense of being overwhelmed</li>
+            </ul>
+
+            {/* Supporting text */}
+            <p className="mb-8">
+              With empathy and guidance, we’ll work together to navigate the
+              challenges life throws your way.
+            </p>
+
+            {/* CTA button */}
+            <button className="border border-gray-800 px-8 py-3 uppercase text-sm tracking-wide hover:bg-gray-800 hover:text-white transition">
+              Work with me →
+            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
