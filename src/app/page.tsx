@@ -1,35 +1,13 @@
 "use client";
 // Needed because this page runs in the browser
-
 import Image from "next/image";
 // Next.js optimized image component
 import { useState } from "react";
-
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      {/* ================= HEADER ================= */}
-      <nav
-        className="
-          max-w-7xl
-          mx-auto
-          px-10
-          py-6
-          flex
-          justify-between
-          items-center
-        "
-      >
-        {/* Site name */}
-        <h1 className="text-2xl font-serif">Lilac Template</h1>
-
-        {/* Header links as per template */}
-        <div className="flex gap-8 text-sm">
-          <span>Blog</span>
-          <span>Contact</span>
-        </div>
-      </nav>
 
       {/* ================= HERO SECTION ================= */}
       <section
@@ -333,118 +311,110 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <section className="bg-[#f7f3ec] py-20">
+        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          {/* LEFT IMAGE */}
+          <div className="rounded-t-full overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+              alt="Decorative flowers"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
-{/* FAQ SECTION */}
-<section className="bg-[#f7f3ec] py-20">
-  <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          {/* RIGHT CONTENT */}
+          <div>
+            <h2 className="text-4xl font-semibold mb-8">FAQs</h2>
 
-    {/* LEFT IMAGE */}
-    <div className="rounded-t-full overflow-hidden">
-      <img
-        src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
-        alt="Decorative flowers"
-        className="w-full h-full object-cover"
-      />
-    </div>
+            <AccordionItem
+              title="Do you take insurance?"
+              content="I am an out-of-network provider. I’m happy to provide documentation for reimbursement if your plan allows."
+            />
 
-    {/* RIGHT CONTENT */}
-    <div>
-      <h2 className="text-4xl font-semibold mb-8">FAQs</h2>
+            <AccordionItem
+              title="What are your rates?"
+              content="Sessions are 50 minutes. Please contact me for current rates and availability."
+            />
 
-      <AccordionItem
-        title="Do you take insurance?"
-        content="I am an out-of-network provider. I’m happy to provide documentation for reimbursement if your plan allows."
-      />
+            <AccordionItem
+              title="Do you have any openings?"
+              content="Availability changes regularly. Please reach out to check current openings."
+            />
+          </div>
+        </div>
+      </section>
 
-      <AccordionItem
-        title="What are your rates?"
-        content="Sessions are 50 minutes. Please contact me for current rates and availability."
-      />
+      {/* PROFESSIONAL BACKGROUND SECTION */}
+      <section className="bg-[#e9e4dc] py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          {/* Section Title */}
+          <h2 className="text-4xl font-semibold text-center mb-12">
+            My Professional Background
+          </h2>
 
-      <AccordionItem
-        title="Do you have any openings?"
-        content="Availability changes regularly. Please reach out to check current openings."
-      />
-    </div>
+          {/* Accordion Item: Education */}
+          <AccordionItem
+            title="Education"
+            content="Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moluccella gladiolus cirsium trollius anthurium prunus delphinium achillea."
+          />
 
-  </div>
-</section>
+          {/* Accordion Item: Licensure */}
+          <AccordionItem
+            title="Licensure"
+            content="Licensed Clinical Psychologist (PsyD). State licensure details and regulatory compliance information."
+          />
 
+          {/* Accordion Item: Certifications */}
+          <AccordionItem
+            title="Certifications"
+            content="CBT, EMDR, Mindfulness-based therapy certifications."
+          />
+        </div>
+      </section>
 
-
-{/* PROFESSIONAL BACKGROUND SECTION */}
-<section className="bg-[#e9e4dc] py-20">
-  <div className="max-w-4xl mx-auto px-6">
-
-    {/* Section Title */}
-    <h2 className="text-4xl font-semibold text-center mb-12">
-      My Professional Background
-    </h2>
-
-    {/* Accordion Item: Education */}
-    <AccordionItem
-      title="Education"
-      content="Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moluccella gladiolus cirsium trollius anthurium prunus delphinium achillea."
-    />
-
-    {/* Accordion Item: Licensure */}
-    <AccordionItem
-      title="Licensure"
-      content="Licensed Clinical Psychologist (PsyD). State licensure details and regulatory compliance information."
-    />
-
-    {/* Accordion Item: Certifications */}
-    <AccordionItem
-      title="Certifications"
-      content="CBT, EMDR, Mindfulness-based therapy certifications."
-    />
-
-  </div>
-
-</section>
-  
-    {/* GET STARTED TODAY SECTION */}
-<section className="bg-[#7a7745] py-28 text-center">
-  {/* 
+      {/* GET STARTED TODAY SECTION */}
+      <section className="bg-[#7a7745] py-28 text-center">
+        {/* 
     bg-[#7a7745]  → olive green background (same feel as template)
     py-28        → top & bottom padding (creates height like template)
     text-center  → center align all text
   */}
 
-  <div className="max-w-3xl mx-auto px-6">
-    {/* 
+        <div className="max-w-3xl mx-auto px-6">
+          {/* 
       max-w-3xl → keeps content narrow (not full screen wide)
       mx-auto   → centers the block horizontally
       px-6      → side padding for mobile safety
     */}
 
-    <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
-      {/* 
+          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
+            {/* 
         text-4xl / md:text-5xl → responsive heading size
         font-semibold         → strong but soft heading
         text-white            → white text on olive background
         mb-6                  → space below heading
       */}
-      Get started today.
-    </h2>
+            Get started today.
+          </h2>
 
-    <p className="text-white/90 text-lg leading-relaxed mb-10">
-      {/* 
+          <p className="text-white/90 text-lg leading-relaxed mb-10">
+            {/* 
         text-white/90  → slightly softer white for readability
         text-lg        → readable paragraph size
         leading-relaxed→ comfortable line spacing
         mb-10          → space before button
       */}
-      Ready to take the first step towards a happier, healthier you?
-      Contact me to book your first session. I look forward to starting
-      this therapeutic journey with you.
-    </p>
+            Ready to take the first step towards a happier, healthier you?
+            Contact me to book your first session. I look forward to starting
+            this therapeutic journey with you.
+          </p>
 
-    <a
-      href="/contact"
-      className="inline-flex items-center gap-2 border border-white text-white px-8 py-4 uppercase text-sm tracking-wide hover:bg-white hover:text-[#7a7745] transition"
-    >
-      {/* 
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-2 border border-white text-white px-8 py-4 uppercase text-sm tracking-wide hover:bg-white hover:text-[#7a7745] transition"
+          >
+            {/* 
         inline-flex        → button fits content
         items-center       → vertically center text + arrow
         gap-2              → space between text and arrow
@@ -456,107 +426,17 @@ export default function Home() {
         hover:text[...]    → olive text on hover
         transition         → smooth hover animation
       */}
-      Get in touch →
-    </a>
-
-  </div>
-</section>
-
-{/* FOOTER */}
-<footer className="bg-[#fbf7f1] pt-24">
-  {/* Outer container */}
-  <div className="max-w-7xl mx-auto px-8 pb-20">
-    {/* 
-      flex → horizontal layout
-      justify-between → left content stays left, right content stays right
-    */}
-    <div className="flex flex-col md:flex-row justify-between gap-16">
-
-      {/* LEFT COLUMN — BRAND + CONTACT */}
-      <div>
-        <h3 className="text-2xl font-semibold mb-6">
-          Lilac Template
-        </h3>
-
-        <p className="mb-2">123 Example Road</p>
-        <p className="mb-4">Minneapolis, MN</p>
-
-        <p className="underline mb-2">email@example.com</p>
-        <p className="underline">(555) 555-5555</p>
-      </div>
-
-      {/* RIGHT SIDE — HOURS + FIND */}
-      <div className="flex gap-24">
-        {/* 
-          gap-24 → space between Hours and Find
-        */}
-
-        {/* HOURS COLUMN */}
-        <div>
-          <h4 className="text-xl font-semibold mb-6">
-            Hours
-          </h4>
-
-          <p className="mb-2">Monday – Friday</p>
-          <p>10am – 6pm</p>
+            Get in touch →
+          </a>
         </div>
+      </section>
 
-        {/* FIND COLUMN */}
-        <div>
-          <h4 className="text-xl font-semibold mb-6">
-            Find
-          </h4>
-
-          <ul className="space-y-2 underline">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-            <li>
-              <a href="/blog">Blog</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  {/* BOTTOM FOOTER BAR */}
-  <div className="bg-[#e8e3db] py-10 text-center text-sm">
-    <div className="flex flex-wrap justify-center gap-6 underline mb-6">
-      <a href="#">Privacy & Cookies Policy</a>
-      <a href="#">Good Faith Estimate</a>
-      <a href="#">Website Terms & Conditions</a>
-      <a href="#">Disclaimer</a>
-    </div>
-
-    <p className="mb-4">
-      Website Template Credits:{" "}
-      <span className="underline">Go Bloom Creative</span>
-    </p>
-
-    <p>
-      All Rights Reserved © 2024 Your Business Name Here, LLC.
-    </p>
-  </div>
-</footer>
-
-</>
+    </>
   );
 }
 
-
 // Reusable Accordion Item Component
-function AccordionItem({
-  title,
-  content,
-}: {
-  title: string;
-  content: string;
-}) {
+function AccordionItem({ title, content }: { title: string; content: string }) {
   // Tracks whether section is open or closed
   const [open, setOpen] = useState(false);
 
@@ -573,9 +453,7 @@ function AccordionItem({
 
       {/* Content shown only when open */}
       {open && (
-        <p className="text-sm leading-relaxed pb-4 max-w-xl">
-          {content}
-        </p>
+        <p className="text-sm leading-relaxed pb-4 max-w-xl">{content}</p>
       )}
     </div>
   );

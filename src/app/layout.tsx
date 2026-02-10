@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link"; // Used for client-side navigation between pages
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,7 +28,105 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* ================= HEADER ================= */}
+        <nav
+          className="
+            max-w-7xl
+            mx-auto
+            px-10
+            py-6
+            flex
+            justify-between
+            items-center
+          "
+        >
+          {/* Site name */}
+          <Link href="/" className="text-2xl font-serif">
+            Lilac Template
+          </Link>
+
+          {/* Header links as per template */}
+          <div className="flex gap-8 text-sm">
+            <Link href="/blog">Blog</Link>
+            <Link href="/contact">Contact</Link>
+          </div>
+        </nav>
+
+        {/* ================= PAGE CONTENT ================= */}
+        {/* Each page.tsx will render HERE */}
+        <main>{children}</main>
+
+        {/* FOOTER */}
+        <footer className="bg-[#fbf7f1] pt-24">
+          {/* Outer container */}
+          <div className="max-w-7xl mx-auto px-8 pb-20">
+            {/* 
+      flex → horizontal layout
+      justify-between → left content stays left, right content stays right
+    */}
+            <div className="flex flex-col md:flex-row justify-between gap-16">
+              {/* LEFT COLUMN — BRAND + CONTACT */}
+              <div>
+                <h3 className="text-2xl font-semibold mb-6">Lilac Template</h3>
+
+                <p className="mb-2">123 Example Road</p>
+                <p className="mb-4">Minneapolis, MN</p>
+
+                <p className="underline mb-2">email@example.com</p>
+                <p className="underline">(555) 555-5555</p>
+              </div>
+
+              {/* RIGHT SIDE — HOURS + FIND */}
+              <div className="flex gap-24">
+                {/* 
+          gap-24 → space between Hours and Find
+        */}
+
+                {/* HOURS COLUMN */}
+                <div>
+                  <h4 className="text-xl font-semibold mb-6">Hours</h4>
+
+                  <p className="mb-2">Monday – Friday</p>
+                  <p>10am – 6pm</p>
+                </div>
+
+                {/* FIND COLUMN */}
+                <div>
+                  <h4 className="text-xl font-semibold mb-6">Find</h4>
+
+                  <ul className="space-y-2 underline">
+                    <li>
+                      <a href="/">Home</a>
+                    </li>
+                    <li>
+                      <a href="/contact">Contact</a>
+                    </li>
+                    <li>
+                      <Link href="/blog">Blog</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* BOTTOM FOOTER BAR */}
+          <div className="bg-[#e8e3db] py-10 text-center text-sm">
+            <div className="flex flex-wrap justify-center gap-6 underline mb-6">
+              <a href="#">Privacy & Cookies Policy</a>
+              <a href="#">Good Faith Estimate</a>
+              <a href="#">Website Terms & Conditions</a>
+              <a href="#">Disclaimer</a>
+            </div>
+
+            <p className="mb-4">
+              Website Template Credits:{" "}
+              <span className="underline">Go Bloom Creative</span>
+            </p>
+
+            <p>All Rights Reserved © 2024 Your Business Name Here, LLC.</p>
+          </div>
+        </footer>
       </body>
     </html>
   );
