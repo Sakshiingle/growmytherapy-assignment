@@ -3,6 +3,8 @@
 
 import Image from "next/image";
 // Next.js optimized image component
+import { useState } from "react";
+
 
 export default function Home() {
   return (
@@ -377,8 +379,71 @@ export default function Home() {
 {/* ================= END FAQ SECTION ================= */}
 
 
+{/* PROFESSIONAL BACKGROUND SECTION */}
+<section className="bg-[#e9e4dc] py-20">
+  <div className="max-w-4xl mx-auto px-6">
+
+    {/* Section Title */}
+    <h2 className="text-4xl font-semibold text-center mb-12">
+      My Professional Background
+    </h2>
+
+    {/* Accordion Item: Education */}
+    <AccordionItem
+      title="Education"
+      content="Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moluccella gladiolus cirsium trollius anthurium prunus delphinium achillea."
+    />
+
+    {/* Accordion Item: Licensure */}
+    <AccordionItem
+      title="Licensure"
+      content="Licensed Clinical Psychologist (PsyD). State licensure details and regulatory compliance information."
+    />
+
+    {/* Accordion Item: Certifications */}
+    <AccordionItem
+      title="Certifications"
+      content="CBT, EMDR, Mindfulness-based therapy certifications."
+    />
+
+  </div>
+</section>
+
 
 
     </>
+  );
+}
+
+
+// Reusable Accordion Item Component
+function AccordionItem({
+  title,
+  content,
+}: {
+  title: string;
+  content: string;
+}) {
+  // Tracks whether section is open or closed
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="border-t border-gray-400">
+      {/* Clickable header */}
+      <button
+        onClick={() => setOpen(!open)} // toggle open/close
+        className="w-full flex justify-between items-center py-4 text-left"
+      >
+        <span className="text-xl">{title}</span>
+        <span className="text-2xl">{open ? "−" : "+"}</span>
+      </button>
+
+      {/* Content shown only when open */}
+      {open && (
+        <p className="text-sm leading-relaxed pb-4 max-w-xl">
+          {content}
+        </p>
+      )}
+    </div>
   );
 }
