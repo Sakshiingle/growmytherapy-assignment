@@ -283,6 +283,57 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ABOUT SECTION — Hi, I’m Lilac */}
+      <section className="bg-[#f6f1ea] py-24">
+        {/* Centered container */}
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
+          {/* LEFT SIDE — Text */}
+          <div className="md:w-1/2 w-full text-gray-800">
+            {/* Section heading */}
+            <h2 className="text-4xl font-serif font-bold mb-6">
+              Hi, I’m Lilac.
+            </h2>
+
+            {/* Paragraph text */}
+            <p className="mb-8 leading-relaxed max-w-lg">
+              I'm committed to providing a safe and supportive environment where
+              we can explore your thoughts, feelings, and behaviors. With
+              empathy and guidance, we'll work together to navigate the
+              challenges life throws your way.
+            </p>
+
+            {/* CTA button */}
+            <button className="border border-gray-800 px-8 py-3 uppercase text-sm tracking-wide hover:bg-gray-800 hover:text-white transition">
+              Let’s chat →
+            </button>
+          </div>
+
+          {/* RIGHT SIDE — Images */}
+          <div className="md:w-1/2 w-full relative flex justify-center">
+            {/* Main tall image */}
+            <Image
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9"
+              alt="Therapist portrait"
+              width={420}
+              height={600}
+              className="rounded-t-full object-cover"
+            />
+
+            {/* Small circular overlay image */}
+            <Image
+              src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+              alt="Flowers detail"
+              width={220}
+              height={220}
+              className="rounded-full absolute bottom-0 -right-6 border-8 border-[#f6f1ea]"
+            />
+          </div>
+        </div>
+      </section>
+
+
+
+      
     </>
   );
 }
