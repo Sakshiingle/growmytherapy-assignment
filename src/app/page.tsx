@@ -330,10 +330,55 @@ export default function Home() {
           </div>
         </div>
       </section>
+    {/* ================= FAQ SECTION ================= */}
+<section className="bg-[#faf7f2] py-24">
+  <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+    {/* LEFT SIDE IMAGE */}
+    <div className="flex justify-center">
+      {/* Image container with rounded top like template */}
+      <div className="w-[320px] h-[420px] rounded-t-full overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+          alt="Calm flowers"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
+    {/* RIGHT SIDE FAQ CONTENT */}
+    <div>
+      {/* FAQ Heading */}
+      <h2 className="font-serif text-4xl text-[#2f3a1f] mb-10">
+        FAQs
+      </h2>
+
+      {/* FAQ ITEM */}
+      <div className="border-t border-[#2f3a1f] py-6 flex justify-between items-center">
+        <p className="text-lg font-medium">Do you take insurance?</p>
+        <span className="text-2xl">+</span>
+      </div>
+
+      {/* FAQ ITEM */}
+      <div className="border-t border-[#2f3a1f] py-6 flex justify-between items-center">
+        <p className="text-lg font-medium">What are your rates?</p>
+        <span className="text-2xl">+</span>
+      </div>
+
+      {/* FAQ ITEM */}
+      <div className="border-t border-b border-[#2f3a1f] py-6 flex justify-between items-center">
+        <p className="text-lg font-medium">Do you have any openings?</p>
+        <span className="text-2xl">+</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+{/* ================= END FAQ SECTION ================= */}
 
 
 
-      
+
     </>
   );
 }
