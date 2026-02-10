@@ -29,28 +29,34 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* ================= HEADER ================= */}
-        <nav
-          className="
-            max-w-7xl
-            mx-auto
-            px-10
-            py-6
-            flex
-            justify-between
-            items-center
-          "
-        >
-          {/* Site name */}
-          <Link href="/" className="text-2xl font-serif">
-            Lilac Template
-          </Link>
+        <header className="bg-[#fbf7f1]">
+          {/* 
+    bg-[#fbf7f1] 
+    → same background color as Blog + Home sections
+  */}
+          <nav
+            className="
+      max-w-7xl
+      mx-auto
+      px-10
+      py-4
+      flex
+      justify-between
+      items-center
+    "
+      >
+            {/* Site title Link → clicking logo goes to Home page  */}
+            <Link href="/" className="text-2xl font-serif text-[#1f3d1b]">
+              Lilac Template
+            </Link>
 
-          {/* Header links as per template */}
-          <div className="flex gap-8 text-sm">
-            <Link href="/blog">Blog</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
-        </nav>
+            {/* Navigation links */}
+            <div className="flex gap-8 text-sm text-[#1f3d1b]">
+              <Link href="/blog">Blog</Link>
+              <Link href="/contact">Contact</Link>
+            </div>
+          </nav>
+        </header>
 
         {/* ================= PAGE CONTENT ================= */}
         {/* Each page.tsx will render HERE */}

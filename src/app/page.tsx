@@ -10,28 +10,23 @@ export default function Home() {
     <>
 
       {/* ================= HERO SECTION ================= */}
-      <section
-        className="
-          max-w-7xl
-          mx-auto
-          px-10
-          py-20
-          flex
+      <section className="bg-[#fbf7f1]">
+        <div className="max-w-7xl mx-auto px-10 py-0 flex
           flex-col          /* mobile: stacked */
           md:flex-row       /* desktop: side by side */
-          items-center
-          gap-16
+          items-center gap-20
         "
       >
         {/* LEFT SIDE: Image */}
-        <div className="md:w-1/2 w-full">
+        <div className="md:w-1/2 w-full flex justify-center md:justify-end">
           <Image
             src="/Hero.jpg"
             alt="Therapy flower"
-            width={600}
-            height={600}
-            className=" rounded-[300px]    // big oval like template object-cover w-full h-auto"
+            width={450}
+            height={450}             
+            className="rounded-t-full object-cover aspect-[1/3]"
           />
+        
         </div>
 
         {/* RIGHT SIDE: Text content */}
@@ -63,6 +58,7 @@ export default function Home() {
             CONNECT WITH ME →
           </button>
         </div>
+      </div>
       </section>
 
       {/* SECTION: Live a fulfilling life */}
