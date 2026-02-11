@@ -8,39 +8,37 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-
       {/* ================= HERO SECTION ================= */}
       <section className="bg-[#f4efe8]">
-  <div className="max-w-7xl mx-auto px-20 py-[25px_0px] flex flex-col md:flex-row items-center gap-0">
+        <div className="max-w-7xl mx-auto px-20 py-[25px_0px] flex flex-col md:flex-row items-center gap-0">
+          {/* LEFT — Image */}
+          <div className="md:w-1/2 w-full flex justify-center md:justify-self-end">
+            <div className="rounded-t-full border-3 border-[#350905] shadow-md overflow-hidden transition hover:shadow-xl">
+              <Image
+                src="/Hero2.jpg"
+                alt="Therapy session in Santa Monica"
+                width={300}
+                height={500}
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
 
-    {/* LEFT — Image */}
-    <div className="md:w-1/2 w-full flex justify-center md:justify-self-end">
-  <div className="rounded-t-full border-3 border-[#350905] shadow-md overflow-hidden transition hover:shadow-xl">
-    <Image
-      src="/Hero2.jpg"
-      alt="Therapy session in Santa Monica"
-      width={300}
-      height={500}
-      className="object-cover"
-      priority
-    />
-  </div>
-</div>
+          {/* RIGHT — Content */}
+          <div className="md:w-1/2 w-full text-left">
+            <h1 className="text-5xl font-heading text-[#350905] leading-tight mb-6">
+              Therapy for Anxiety, Trauma & Burnout in Santa Monica
+            </h1>
 
+            <p className="text-lg text-[#3e4a2b] max-w-md mb-8">
+              Evidence-based, depth-oriented therapy for high-achieving adults
+              who feel overwhelmed, stuck, or emotionally exhausted.
+            </p>
 
-    {/* RIGHT — Content */}
-    <div className="md:w-1/2 w-full text-left">
-      <h1 className="text-5xl font-heading text-[#350905] leading-tight mb-6">
-        Therapy for Anxiety, Trauma & Burnout in Santa Monica
-      </h1>
-
-      <p className="text-lg text-[#3e4a2b] max-w-md mb-8">
-        Evidence-based, depth-oriented therapy for high-achieving adults who feel overwhelmed, stuck, or emotionally exhausted.
-      </p>
-
-      <Link
-  href="/contact#appointment"
-  className="
+            <Link
+              href="/contact#appointment"
+              className="
     inline-block
     border-2 border-[#350905]
     px-8 py-3
@@ -49,13 +47,12 @@ export default function Home() {
     hover:border-[#803E39]
     hover:text-white
   "
->
-  Schedule a Consultation →
-</Link>
-    </div>
-  </div>
-</section>
-
+            >
+              Schedule a Consultation →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* About SECTION*/}
       <section
@@ -73,19 +70,26 @@ export default function Home() {
 
             {/* First paragraph */}
             <p className="text-lg text-black-700 mb-4">
-              I’m a licensed clinical psychologist based in Santa Monica, California, offering therapy for adults navigating anxiety, trauma, burnout, and high internal pressure.
+              I’m a licensed clinical psychologist based in Santa Monica,
+              California, offering therapy for adults navigating anxiety,
+              trauma, burnout, and high internal pressure.
             </p>
 
             {/* Second paragraph */}
             <p className="text-lg text-black-700 mb-8">
-            Many of the people I work with are high-achieving and self-aware—but internally feel exhausted, stuck in overthinking, or emotionally on edge.
-            My approach is warm, collaborative, and grounded. I integrate evidence-based methods including CBT, EMDR, mindfulness practices, and body-oriented techniques to address both emotional and physiological stress responses.
-            I offer in-person therapy from my Santa Monica office and secure telehealth sessions throughout California.
+              Many of the people I work with are high-achieving and
+              self-aware—but internally feel exhausted, stuck in overthinking,
+              or emotionally on edge. My approach is warm, collaborative, and
+              grounded. I integrate evidence-based methods including CBT, EMDR,
+              mindfulness practices, and body-oriented techniques to address
+              both emotional and physiological stress responses. I offer
+              in-person therapy from my Santa Monica office and secure
+              telehealth sessions throughout California.
             </p>
 
-              <Link
-  href="/contact#appointment"
-  className="
+            <Link
+              href="/contact#appointment"
+              className="
     inline-block
     border-2 border-[#350905]
     px-4 py-2
@@ -94,10 +98,10 @@ export default function Home() {
     hover:border-[#803E39]
     hover:text-white
   "
->
-  Get In Touch →
-</Link>
-</div>
+            >
+              Get In Touch →
+            </Link>
+          </div>
 
           {/* RIGHT SIDE: Image */}
           <div className="relative w-full h-full rounded-lg overflow-hidden">
@@ -113,99 +117,183 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION: My Specialties */}
-      <section
-        // Same light background used in the template
-        className="bg-[#f6f1eb] py-24"
+{/* ================= Our SPECIALTIES - DR. MAYA ================= */}
+<section
+  style={{
+    padding: "100px 20px",
+    backgroundColor: "#f4efe8",
+    textAlign: "center",
+  }}
+>
+  <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
+    <h2
+      style={{
+        fontSize: "clamp(36px, 6vw, 52px)",
+        fontWeight: 600,
+        color: "#2f3b1f",
+        marginBottom: "64px",
+        fontFamily: "Lora, serif",
+      }}
+    >
+      Our Specialties
+    </h2>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+        gap: "40px",
+      }}
+    >
+      {/* Specialty 1: Anxiety */}
+      <div
+        style={{
+          padding: "48px 32px",
+          backgroundColor: "white",
+          borderRadius: "24px",
+          boxShadow: "0 12px 40px rgba(0,0,0,0.08)",
+        }}
       >
-        {/* Main container to center content */}
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Section Heading */}
-          <h2
-            // Large serif heading centered
-            className="text-4xl md:text-5xl font-serif text-center text-[#2f3e2f] mb-16"
-          >
-            My Specialties
-          </h2>
-
-          {/* 3-column layout for cards */}
-          <div className="grid md:grid-cols-3 gap-10">
-            {/* CARD 1 */}
-            <div className="border border-[#2f3e2f] p-8 flex flex-col">
-              {/* Card title */}
-              <h3 className="text-xl font-semibold text-[#2f3e2f] mb-4">
-                Self-Esteem
-              </h3>
-
-              {/* Card description */}
-              <p className="text-gray-700 mb-10">
-                Building a strong sense of self-worth is key to living a
-                fulfilled life. Let's work together to bolster your self-esteem.
-              </p>
-
-              {/* Circular image */}
-              <div className="mt-auto flex justify-center">
-                <div className="relative w-56 h-56 rounded-full overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70"
-                    alt="Self-esteem support"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* CARD 2 */}
-            <div className="border border-[#2f3e2f] p-8 flex flex-col">
-              <h3 className="text-xl font-semibold text-[#2f3e2f] mb-4">
-                Relationships
-              </h3>
-
-              <p className="text-gray-700 mb-10">
-                Navigating relationships can be complex. I'm here to guide you
-                through these complexities to help you form healthier
-                connections.
-              </p>
-
-              <div className="mt-auto flex justify-center">
-                <div className="relative w-56 h-56 rounded-full overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-                    alt="Relationships therapy"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* CARD 3 */}
-            <div className="border border-[#2f3e2f] p-8 flex flex-col">
-              <h3 className="text-xl font-semibold text-[#2f3e2f] mb-4">
-                Burnout
-              </h3>
-
-              <p className="text-gray-700 mb-10">
-                Feeling overwhelmed by your career is more common than you
-                think. Together, we'll identify strategies to manage and prevent
-                burnout.
-              </p>
-
-              <div className="mt-auto flex justify-center">
-                <div className="relative w-56 h-56 rounded-full overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
-                    alt="Burnout recovery"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+        <div
+          style={{
+            width: "80px",
+            height: "80px",
+            backgroundColor: "#e8dcc8",
+            borderRadius: "20px",
+            margin: "0 auto 8px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: "32px",
+          }}
+        >
+          🧠
         </div>
-      </section>
+
+        <h3
+          style={{
+            fontSize: "28px",
+            color: "#2f3b1f",
+            marginBottom: "16px",
+            fontFamily: "Lora, serif",
+          }}
+        >
+          Anxiety & Panic
+        </h3>
+        <p
+          style={{
+            fontSize: "18px",
+            color: "#5a6a4a",
+            lineHeight: 1.6,
+            fontFamily: "Inter, sans-serif",
+          }}
+        >
+          CBT and mindfulness for constant worry, tension, overthinking,
+          and panic attacks.
+        </p>
+      </div>
+
+      {/* Specialty 2: Trauma */}
+      <div
+        style={{
+          padding: "48px 32px",
+          backgroundColor: "white",
+          borderRadius: "24px",
+          boxShadow: "0 12px 40px rgba(0,0,0,0.08)",
+        }}
+      >
+        <div
+          style={{
+            width: "80px",
+            height: "80px",
+            backgroundColor: "#e8dcc8",
+            borderRadius: "20px",
+            margin: "0 auto 8px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: "32px",
+          }}
+        >
+          💔
+        </div>
+
+        <h3
+          style={{
+            fontSize: "28px",
+            color: "#2f3b1f",
+            marginBottom: "16px",
+            fontFamily: "Lora, serif",
+          }}
+        >
+          Trauma Therapy
+        </h3>
+        <p
+          style={{
+            fontSize: "18px",
+            color: "#5a6a4a",
+            lineHeight: 1.6,
+            fontFamily: "Inter, sans-serif",
+          }}
+        >
+          EMDR for single-incident trauma and complex patterns from
+          childhood or relationships.
+        </p>
+      </div>
+
+      {/* Specialty 3: Burnout */}
+      <div
+        style={{
+          padding: "48px 32px",
+          backgroundColor: "white",
+          borderRadius: "24px",
+          boxShadow: "0 12px 40px rgba(0,0,0,0.08)",
+        }}
+      >
+        <div
+          style={{
+            width: "80px",
+            height: "80px",
+            backgroundColor: "#e8dcc8",
+            borderRadius: "20px",
+            margin: "0 auto 8px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: "32px",
+          }}
+        >
+          🔥
+        </div>
+
+        <h3
+          style={{
+            fontSize: "28px",
+            color: "#2f3b1f",
+            marginBottom: "16px",
+            fontFamily: "Lora, serif",
+          }}
+        >
+          Burnout Recovery
+        </h3>
+        <p
+          style={{
+            fontSize: "18px",
+            color: "#5a6a4a",
+            lineHeight: 1.6,
+            fontFamily: "Inter, sans-serif",
+          }}
+        >
+          Support for high-achievers, entrepreneurs, and professionals
+          feeling exhausted.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ {/* Service section */}
+
 
       {/* SUPPORT SECTION — You don’t have to do this alone */}
       <section className="bg-[#d6d3db] py-24">
@@ -423,7 +511,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-
     </>
   );
 }
