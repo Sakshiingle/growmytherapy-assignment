@@ -231,6 +231,68 @@ export default function ContactPage() {
 
         </div>
       </section>
+          {/* MY OFFICE SECTION */}
+      <section style={{ backgroundColor: '#8a9365', padding: '0' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '500px' }}>
+          
+          {/* LEFT COLUMN - Office Info */}
+          <div style={{ 
+            padding: '80px 60px', 
+            display: 'flex', 
+            flexDirection: 'column', 
+            justifyContent: 'center',
+            color: 'white'
+          }}>
+            
+            <h2 style={{ 
+              fontSize: '56px', 
+              fontWeight: 'bold', 
+              marginBottom: '40px', 
+              fontFamily: 'serif',
+              lineHeight: '1.2'
+            }}>
+              My Office
+            </h2>
+            
+            <div style={{ fontSize: '20px', lineHeight: '1.8', marginBottom: '40px' }}>
+              <p style={{ marginBottom: '10px' }}>123 Example Street</p>
+              <p>Minneapolis, MN</p>
+            </div>
+            
+            <h3 style={{ 
+              fontSize: '32px', 
+              fontWeight: 'bold', 
+              marginBottom: '20px',
+              fontFamily: 'serif'
+            }}>
+              Hours
+            </h3>
+            
+            <div style={{ fontSize: '20px', lineHeight: '1.8' }}>
+              <p style={{ marginBottom: '10px' }}>Monday – Friday</p>
+              <p>10am – 6pm</p>
+            </div>
+            
+          </div>
+          
+          {/* RIGHT COLUMN - Google Map */}
+          <div style={{ position: 'relative', minHeight: '500px' }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22594.44779969243!2d-93.26509!3d44.97775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b3329a8e0cd0a7%3A0x5df0cfcd3ecca0ab!2sMinneapolis%2C%20MN%2C%20USA!5e0!3m2!1sen!2sin!4v1644567890123!5m2!1sen!2sin"
+              style={{
+                position: 'absolute',
+                top: '40px',
+                left: '0',
+                width: '90%',
+                height: '80%',
+                border: 'none'
+              }}
+              loading="lazy"
+            />
+          </div>
+          
+        </div>
+      </section>
 
       
     </>
