@@ -142,6 +142,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      
           {/* BOOK APPOINTMENT SECTION */}
       <section style={{ backgroundColor: '#e5ddd2', padding: '80px 20px' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>

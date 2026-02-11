@@ -11,16 +11,16 @@ export default function Home() {
 
       {/* ================= HERO SECTION ================= */}
       <section className="bg-[#f4efe8]">
-  <div className="max-w-7xl mx-auto px-10 py-10px 0px flex flex-col md:flex-row items-center gap-0">
+  <div className="max-w-7xl mx-auto px-20 py-[25px_0px] flex flex-col md:flex-row items-center gap-0">
 
     {/* LEFT — Image */}
     <div className="md:w-1/2 w-full flex justify-center md:justify-self-end">
   <div className="rounded-t-full border-3 border-[#350905] shadow-md overflow-hidden transition hover:shadow-xl">
     <Image
-      src="/Dr. Maya Reynolds.jpg"
-      alt="Dr. Maya Reynolds"
+      src="/Hero2.jpg"
+      alt="Therapy session in Santa Monica"
       width={300}
-      height={450}
+      height={500}
       className="object-cover"
       priority
     />
@@ -30,7 +30,7 @@ export default function Home() {
 
     {/* RIGHT — Content */}
     <div className="md:w-1/2 w-full text-left">
-      <h1 className="text-5xl font-heading text-[#243619] leading-tight mb-6">
+      <h1 className="text-5xl font-heading text-[#350905] leading-tight mb-6">
         Therapy for Anxiety, Trauma & Burnout in Santa Monica
       </h1>
 
@@ -42,7 +42,7 @@ export default function Home() {
   href="/contact#appointment"
   className="
     inline-block
-    border border-[#243619]
+    border-2 border-[#350905]
     px-8 py-3
     transition
     hover:bg-[#803E39]
@@ -57,52 +57,53 @@ export default function Home() {
 </section>
 
 
-      {/* SECTION: Live a fulfilling life */}
+      {/* About SECTION*/}
       <section
         // Light beige background like the template
-        className="bg-[#f4efe9] py-24"
+        className="bg-[#e8dcc8] py-10"
       >
         {/* Centered container with max width */}
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-20 py-0 grid md:grid-cols-2 gap-16 items-center">
           {/* LEFT SIDE: Text content */}
           <div>
             {/* Section heading */}
-            <h2 className="text-4xl md:text-5xl font-serif text-gray-900 mb-6">
-              Live a fulfilling life.
+            <h2 className="text-4xl md:text-5xl font-serif text-[#350905] mb-6">
+              About Dr.Maya Reynolds
             </h2>
 
             {/* First paragraph */}
-            <p className="text-lg text-gray-700 mb-4">
-              Life can be challenging—especially when you're trying to balance
-              your personal and professional life.
+            <p className="text-lg text-black-700 mb-4">
+              I’m a licensed clinical psychologist based in Santa Monica, California, offering therapy for adults navigating anxiety, trauma, burnout, and high internal pressure.
             </p>
 
             {/* Second paragraph */}
-            <p className="text-lg text-gray-700 mb-10">
-              It's easy to feel like you're alone in facing these challenges,
-              but I want you to know that I'm here to help.
+            <p className="text-lg text-black-700 mb-8">
+            Many of the people I work with are high-achieving and self-aware—but internally feel exhausted, stuck in overthinking, or emotionally on edge.
+            My approach is warm, collaborative, and grounded. I integrate evidence-based methods including CBT, EMDR, mindfulness practices, and body-oriented techniques to address both emotional and physiological stress responses.
+            I offer in-person therapy from my Santa Monica office and secure telehealth sessions throughout California.
             </p>
 
-            {/* CTA BUTTON — this was missing before */}
-            <button
-              className="
-          border border-gray-900
-          px-8 py-3
-          text-sm font-medium
-          tracking-wide
-          hover:bg-gray-900 hover:text-white
-          transition
-        "
-            >
-              GET IN TOUCH →
-            </button>
-          </div>
+              <Link
+  href="/contact#appointment"
+  className="
+    inline-block
+    border-2 border-[#350905]
+    px-4 py-2
+    transition
+    hover:bg-[#803E39]
+    hover:border-[#803E39]
+    hover:text-white
+  "
+>
+  Get In Touch →
+</Link>
+</div>
 
           {/* RIGHT SIDE: Image */}
-          <div className="relative w-full h-[420px] rounded-lg overflow-hidden">
+          <div className="relative w-full h-full rounded-lg overflow-hidden">
             <Image
               // Unsplash image URL
-              src="https://images.unsplash.com/photo-1506784365847-bbad939e9335"
+              src="/About.jpg"
               alt="Calm lifestyle"
               fill
               // Makes image cover container like template

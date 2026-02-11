@@ -36,19 +36,19 @@ export default function RootLayout({
       max-w-7xl
       mx-auto
       px-10
-      py-4
+      py-[10px_35px]   
       flex
       justify-between
       items-center
     "
       >
             {/* Site title Link → clicking logo goes to Home page  */}
-            <Link href="/" className="text-2xl font-serif text-[#350905]">
-              Lilac Template
+            <Link href="/" className="text-2xl font-serif text-[#350905] hover:text-[#8a6a3d] transition">
+              Dr. Maya Reynolds, PsyD
             </Link>
 
             {/* Navigation links */}
-            <div className="flex gap-8 text-sm text-[#350905]">
+            <div className="flex gap-8 text-sm font-serif text-[#350905] ">
               <Link href="/blog">Blog</Link>
               <Link href="/contact">Contact</Link>
             </div>
@@ -70,7 +70,7 @@ export default function RootLayout({
             <div className="flex flex-col md:flex-row justify-between gap-16">
               {/* LEFT COLUMN — BRAND + CONTACT */}
               <div>
-                <h3 className="text-2xl font-semibold mb-6">Lilac Template</h3>
+                <h3 className="text-2xl font-semibold mb-6">Dr. Maya Reynolds, PsyD</h3>
 
                 <p className="mb-2">123 Example Road</p>
                 <p className="mb-4">Minneapolis, MN</p>
