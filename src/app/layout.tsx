@@ -30,11 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* ================= HEADER ================= */}
-        <header className="bg-[#fbf7f1]">
-          {/* 
-    bg-[#fbf7f1] 
-    → same background color as Blog + Home sections
-  */}
+        <header className="bg-[#f4efe8]">
           <nav
             className="
       max-w-7xl
@@ -47,12 +43,12 @@ export default function RootLayout({
     "
       >
             {/* Site title Link → clicking logo goes to Home page  */}
-            <Link href="/" className="text-2xl font-serif text-[#1f3d1b]">
+            <Link href="/" className="text-2xl font-serif text-[#350905]">
               Lilac Template
             </Link>
 
             {/* Navigation links */}
-            <div className="flex gap-8 text-sm text-[#1f3d1b]">
+            <div className="flex gap-8 text-sm text-[#350905]">
               <Link href="/blog">Blog</Link>
               <Link href="/contact">Contact</Link>
             </div>
