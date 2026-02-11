@@ -294,7 +294,93 @@ export default function ContactPage() {
         </div>
       </section>
 
+
+{/* FIND ME ON SOCIAL SECTION */}
+<section style={{ backgroundColor: '#fbf7f1', padding: '80px 20px' }}>
+  <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+    
+    <h2 style={{ 
+      fontSize: '56px', 
+      fontWeight: 'bold', 
+      color: '#2f3b1f', 
+      marginBottom: '50px',
+      fontFamily: 'serif'
+    }}>
+      Find me on social.
+    </h2>
+    
+    {/* Add CSS for hover effect */}
+    <style dangerouslySetInnerHTML={{__html: `
+      .social-image {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .social-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      }
+    `}} />
+    
+    {/* 4-Column Gallery Grid */}
+    <div style={{ 
+      display: 'grid', 
+      gridTemplateColumns: 'repeat(4, 1fr)', 
+      gap: '20px' 
+    }}>
       
+      {/* Image 1 */}
+      <a href="https://instagram.com" target="_blank">
+        <img 
+          src="/contact1.jpg" 
+          alt="Instagram post 1"
+          className="social-image"
+        />
+      </a>
+      
+      {/* Image 2 */}
+      <a href="https://instagram.com" target="_blank">
+        <img 
+          src="/contact2.jpg" 
+          alt="Instagram post 2"
+          className="social-image"
+        />
+      </a>
+      
+      {/* Image 3 */}
+      <a href="https://instagram.com" target="_blank">
+        <img 
+          src="/blog_post3.jpg" 
+          alt="Instagram post 3"
+          className="social-image"
+        />
+      </a>
+      
+      {/* Image 4 */}
+      <a href="https://instagram.com" target="_blank">
+        <img 
+          src="/blog_post4.jpg" 
+          alt="Instagram post 4"
+          className="social-image"
+        />
+      </a>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+  {/* Divider */}
+            <div style={{
+        width: '100%',
+        height: '1px',
+        backgroundColor: '#000000',
+        margin: '0'
+      }} />
+
     </>
   );
 }

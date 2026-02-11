@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import Link from "next/link"; // Used for client-side navigation between pages
 import "./globals.css";
 
-const geistSans = Geist({
+
+const geistSans = Playfair_Display({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = Inter({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });

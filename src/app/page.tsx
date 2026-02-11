@@ -23,8 +23,8 @@ export default function Home() {
             src="/Hero.jpg"
             alt="Therapy flower"
             width={450}
-            height={450}             
-            className="rounded-t-full object-cover aspect-[1/3]"
+            height={300}             
+            className="rounded-t-full object-cover aspect-[2/3]"
           />
         
         </div>
