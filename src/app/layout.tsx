@@ -59,77 +59,81 @@ export default function RootLayout({
         {/* Each page.tsx will render HERE */}
         <main>{children}</main>
 
-        {/* FOOTER */}
-        <footer className="bg-[#fbf7f1] pt-24">
-          {/* Outer container */}
-          <div className="max-w-7xl mx-auto px-8 pb-20">
-            {/* 
-      flex → horizontal layout
-      justify-between → left content stays left, right content stays right
-    */}
-            <div className="flex flex-col md:flex-row justify-between gap-16">
-              {/* LEFT COLUMN — BRAND + CONTACT */}
-              <div>
-                <h3 className="text-2xl font-semibold mb-6">Dr. Maya Reynolds, PsyD</h3>
+       {/* FOOTER */}
+<footer className="bg-[#f4f1e3] font-serif text-[#350905] pt-12">
+  <div className="max-w-5xl mx-auto px-6 pb-8">
 
-                <p className="mb-2">123 Example Road</p>
-                <p className="mb-4">Minneapolis, MN</p>
+    {/* Main Layout */}
+    <div className="grid md:grid-cols-3 gap-10">
 
-                <p className="underline mb-2">email@example.com</p>
-                <p className="underline">(555) 555-5555</p>
-              </div>
+      {/* LEFT COLUMN */}
+      <div>
+        <h3 className="text-2xl font-semibold leading-snug">
+          Dr. Maya Reynolds, PsyD
+        </h3>
+        <p className="mb-3 text-sm">
+          Licensed Clinical Psychologist
+        </p>
 
-              {/* RIGHT SIDE — HOURS + FIND */}
-              <div className="flex gap-24">
-                {/* 
-          gap-24 → space between Hours and Find
-        */}
+        <p className="text-sm">123th Street 45 W</p>
+        <p className="mb-3 text-sm">Santa Monica, CA 90401</p>
 
-                {/* HOURS COLUMN */}
-                <div>
-                  <h4 className="text-xl font-semibold mb-6">Hours</h4>
+        <p className="text-sm mb-1">
+          maya@mayareynolds.com
+        </p>
+        <p className="text-sm">
+          (310)555-1234
+        </p>
+      </div>
 
-                  <p className="mb-2">Monday – Friday</p>
-                  <p>10am – 6pm</p>
-                </div>
+      {/* QUICK LINKS */}
+      <div>
+        <h4 className="text-lg text-center font-semibold mb-3">QUICK LINKS</h4>
 
-                {/* FIND COLUMN */}
-                <div>
-                  <h4 className="text-xl font-semibold mb-6">Find</h4>
+        <ul className="space-y-1 text-center">
+          <li><a href="/" className="hover:opacity-70 transition">Home</a></li>
+          <li><a href="/#about" className="hover:opacity-70 transition">About</a></li>
+          <li><a href="/#services" className="hover:opacity-70 transition">Services</a></li>
+          <li><a href="/contact" className="hover:opacity-70 transition">Contact</a></li>
+          <li><a href="/blog" className="hover:opacity-70 transition">Blog</a></li>
+        </ul>
+      </div>
 
-                  <ul className="space-y-2 underline">
-                    <li>
-                      <a href="/">Home</a>
-                    </li>
-                    <li>
-                      <a href="/contact">Contact</a>
-                    </li>
-                    <li>
-                      <Link href="/blog">Blog</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* HOURS */}
+      <div>
+        <h4 className="text-lg text-end font-semibold mb-3">HOURS</h4>
 
-          {/* BOTTOM FOOTER BAR */}
-          <div className="bg-[#e8e3db] py-10 text-center text-sm">
-            <div className="flex flex-wrap justify-center gap-6 underline mb-6">
-              <a href="#">Privacy & Cookies Policy</a>
-              <a href="#">Good Faith Estimate</a>
-              <a href="#">Website Terms & Conditions</a>
-              <a href="#">Disclaimer</a>
-            </div>
+        <p className="text-sm text-end">Monday – Friday</p>
+        <p className="text-sm mb-2 text-end">10:00 AM – 6:00 PM</p>
 
-            <p className="mb-4">
-              Website Template Credits:{" "}
-              <span className="underline">Go Bloom Creative</span>
-            </p>
+        <p className="text-sm text-end">Saturday</p>
+        <p className="text-sm mb-2 text-end">By appointment</p>
 
-            <p>All Rights Reserved © 2024 Your Business Name Here, LLC.</p>
-          </div>
-        </footer>
+        <p className="text-sm text-end">
+          Telehealth available<br />
+          throughout California
+        </p>
+      </div>
+
+      
+
+    </div>
+  </div>
+
+  {/* Bottom Bar */}
+  <div className="border-t border-[#d8d2c7] py-4 text-center text-xs leading-relaxed">
+    <div className="flex justify-center gap-6 mb-2">
+      <a href="#" className="hover:opacity-70 transition">Privacy Policy</a>
+      <a href="#" className="hover:opacity-70 transition">Terms of Service</a>
+      <a href="#" className="hover:opacity-70 transition">Disclaimer</a>
+    </div>
+
+    <p>
+      © 2026 Dr. Maya Reynolds, PsyD. All rights reserved. | Built for Healing
+    </p>
+  </div>
+</footer>
+
       </body>
     </html>
   );
