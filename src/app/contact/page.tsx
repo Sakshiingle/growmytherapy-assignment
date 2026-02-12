@@ -67,16 +67,21 @@ export default function ContactPage() {
           borderRadius: "8px",
           cursor: "pointer",
         }}
-        onMouseOver={(e) => {
-          e.target.style.backgroundColor = "#803E39";  // hover:bg-[#803E39]
-          e.target.style.borderColor = "#803E39";      // hover:border-[#803E39]
-          e.target.style.color = "white";              // hover:text-white
-        }}
-        onMouseOut={(e) => {
-          e.target.style.backgroundColor = "transparent";
-          e.target.style.borderColor = "#350905";
-          e.target.style.color = "#350905";
-        }}
+        
+       onMouseOver={(e: React.MouseEvent<HTMLAnchorElement>) => {
+  const target = e.target as HTMLElement;
+  target.style.backgroundColor = "#803E39";
+  target.style.borderColor = "#803E39";
+  target.style.color = "white";
+}}
+
+onMouseOut={(e: React.MouseEvent<HTMLAnchorElement>) => {
+  const target = e.currentTarget;
+  target.style.backgroundColor = "transparent";
+  target.style.borderColor = "#350905";
+  target.style.color = "#350905";
+}}
+      
       >
         Book Free Consult Now
       </a>

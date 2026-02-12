@@ -17,8 +17,8 @@ export default function BlogPage() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-[#fbf7f1] py-24">
-        <div className="max-w-7xl mx-auto px-10 flex flex-col md:flex-row items-center gap-20">
+      <section className="bg-[#f4efe8]">
+        <div className="max-w-1000 mx-auto px-30  flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
             <img
               src="/bloghero.jpg"

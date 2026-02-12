@@ -60,7 +60,7 @@ export default function RootLayout({
         <main>{children}</main>
 
        {/* FOOTER */}
-<footer className="bg-[#f4f1e3] font-['Lora'] tracking-wide text-[#350905] pt-12">
+<footer className="bg-[#f4f1e3] font-['Lora'] tracking-wide text-[#350905] pt-12 px-20">
   <div className="max-w-7xl mx-auto px-6 pb-8">
 
     {/* Main Layout */}
