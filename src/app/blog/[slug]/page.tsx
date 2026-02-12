@@ -1,4 +1,7 @@
 import { notFound } from "next/navigation";
+export function generateStaticParams() {
+  return Object.keys(blogs).map((slug) => ({ slug }));
+}
 
 const blogs = {
   "blog-post-one": {
