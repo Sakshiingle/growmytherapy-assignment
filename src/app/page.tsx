@@ -6,6 +6,38 @@ import { useState } from "react";
 import Link from "next/link";
 
 export default function Home() {
+  const testimonials = [
+  {
+    quote:
+      "Working with Dr. Maya helped me understand my anxiety in a way I never had before. I feel more grounded and less reactive in my daily life.",
+    author: "Client, Santa Monica",
+  },
+  {
+    quote:
+      "I came in feeling burned out and constantly overwhelmed. Therapy became the one place where I could slow down and reconnect with myself.",
+    author: "Professional Client",
+  },
+  {
+    quote:
+      "The combination of practical tools and deeper work made a real difference. I finally feel like I’m responding to life instead of bracing for it.",
+    author: "Telehealth Client, CA",
+  },
+];
+
+const [current, setCurrent] = useState(0);
+
+const prevSlide = () => {
+  setCurrent((prev) =>
+    prev === 0 ? testimonials.length - 1 : prev - 1
+  );
+};
+
+const nextSlide = () => {
+  setCurrent((prev) =>
+    prev === testimonials.length - 1 ? 0 : prev + 1
+  );
+};
+
   return (
     <>
       {/* ================= HERO SECTION ================= */}
@@ -64,7 +96,7 @@ export default function Home() {
           {/* LEFT SIDE: Text content */}
           <div>
             {/* Section heading */}
-            <h2 className="text-5xl md:text-5xl font-clamp text-[#350905] mb-6">
+            <h2 className="text-7xl md:text-5xl font-serif font-semibold text-[#350905] mb-6">
               About Dr.Maya Reynolds
             </h2>
 
@@ -298,7 +330,7 @@ export default function Home() {
 
     {/* Section Title */}
     <div className="text-center mb-16">
-      <h2 className="text-7xl md:text-5xl font-clamp text-[#350905] mb-6">
+      <h2 className="text-7xl md:text-5xl font-serif font-semibold text-[#350905] mb-6">
         How I Can Support You
       </h2>
       <p className="text-lg text-[#350905] max-w-2xl mx-auto leading-relaxed">
@@ -311,7 +343,7 @@ export default function Home() {
       <img
         src="/Therapy1.jpg"
         alt="Anxiety Therapy Session"
-        className="rounded-xl shadow-md w-full h-[420px] object-cover"
+        className="rounded-xl shadow-md w-full h-[400px] object-cover"
       />
       <div>
         <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
@@ -346,7 +378,7 @@ export default function Home() {
       <img
         src="/Therapy2.jpg"
         alt="Trauma Therapy Illustration"
-        className="rounded-xl shadow-md w-full h-[420px] object-cover order-1 md:order-2"
+        className="rounded-xl shadow-md w-full h-[400px] object-cover order-1 md:order-2"
       />
     </div>
 
@@ -355,7 +387,7 @@ export default function Home() {
       <img
         src="/Therapy8.jpg"
         alt="Burnout Therapy Session"
-        className="rounded-xl shadow-md w-full h-[420px] object-cover"
+        className="rounded-xl shadow-md w-full h-[400px] object-cover"
       />
       <div>
         <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
@@ -390,7 +422,7 @@ export default function Home() {
       <img
         src="/Therapy3.jpg"
         alt="Calm Therapy Room"
-        className="rounded-xl shadow-md w-full h-[420px] object-cover order-1 md:order-2"
+        className="rounded-xl shadow-md w-full h-[400px] object-cover order-1 md:order-2"
       />
     </div>
 
@@ -400,56 +432,46 @@ export default function Home() {
 
  
 
+{/* ================= TESTIMONIALS ================= */}
+<section className="bg-[#f3efe8] py-20 px-6">
+  <div className="max-w-4xl mx-auto text-center">
 
-      
+    {/* Title */}
+    <h2 className="text-7xl md:text-5xl font-serif font-semibold text-[#803E39] mb-6">
+      Kind Words From Clients
+    </h2>
 
-      {/* ABOUT SECTION — Hi, I’m Lilac */}
-      <section className="bg-[#f6f1ea] py-24">
-        {/* Centered container */}
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
-          {/* LEFT SIDE — Text */}
-          <div className="md:w-1/2 w-full text-gray-800">
-            {/* Section heading */}
-            <h2 className="text-4xl font-serif font-bold mb-6">
-              Hi, I’m Lilac.
-            </h2>
+    {/* Card */}
+    <div className="relative bg-white rounded-2xl shadow-md px-10 py-10 transition-all duration-500">
 
-            {/* Paragraph text */}
-            <p className="mb-8 leading-relaxed max-w-lg">
-              I'm committed to providing a safe and supportive environment where
-              we can explore your thoughts, feelings, and behaviors. With
-              empathy and guidance, we'll work together to navigate the
-              challenges life throws your way.
-            </p>
+      <p className="text-lg md:text-xl text-[#350905] leading-relaxed mb-8">
+        “{testimonials[current].quote}”
+      </p>
 
-            {/* CTA button */}
-            <button className="border border-gray-800 px-8 py-3 uppercase text-sm tracking-wide hover:bg-gray-800 hover:text-white transition">
-              Let’s chat →
-            </button>
-          </div>
+      <p className="text-sm text-[#350905] font-medium">
+        — {testimonials[current].author}
+      </p>
 
-          {/* RIGHT SIDE — Images */}
-          <div className="md:w-1/2 w-full relative flex justify-center">
-            {/* Main tall image */}
-            <Image
-              src="https://images.unsplash.com/photo-1517841905240-472988babdf9"
-              alt="Therapist portrait"
-              width={420}
-              height={600}
-              className="rounded-t-full object-cover"
-            />
+      {/* Navigation */}
+      <div className="flex justify-center gap-8 mt-10">
+        <button
+          onClick={prevSlide}
+          className="text-[#803E39] border border-[#803E39] px-5 py-2 rounded-full hover:bg-[#803E39] hover:text-white transition"
+        >
+          ←
+        </button>
 
-            {/* Small circular overlay image */}
-            <Image
-              src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
-              alt="Flowers detail"
-              width={220}
-              height={220}
-              className="rounded-full absolute bottom-0 -right-6 border-8 border-[#f6f1ea]"
-            />
-          </div>
-        </div>
-      </section>
+        <button
+          onClick={nextSlide}
+          className="text-[#803E39] border border-[#803E39] px-5 py-2 rounded-full hover:bg-[#803E39] hover:text-white transition"
+        >
+          →
+        </button>
+      </div>
+    </div>
+  </div>
+</section> 
+
 
       {/* FAQ SECTION */}
       <section className="bg-[#f7f3ec] py-20">
