@@ -259,7 +259,7 @@ throughout California. Book a free consultation below.
 
 
           {/* MY OFFICE SECTION */}
-      <section id="my-office" style={{ backgroundColor: '#8a9365', padding: '0' }}>
+      <section id="my-office" style={{ backgroundColor: '#8a9365', padding: '25px' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '500px' }}>
           
           {/* LEFT COLUMN - Office Info */}
@@ -302,13 +302,13 @@ throughout California. Book a free consultation below.
             
           </div>
           
-          {/* RIGHT COLUMN - Google Map - Updated Santa Monica */}
+          {/* RIGHT COLUMN - Google Map - Key-Free Santa Monica */}
 <div style={{ position: 'relative', minHeight: '500px' }}>
   <iframe
-    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6d9J1_8p1a8g5Q&q=Dr.+Maya+Reynolds+123th+Street+45+W,+Santa+Monica,+CA+90401"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.835248140013!2d-118.492758684629!3d34.021768480465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bcbb5d0b3f2b%3A0x123th+Street+45+W%2C+Santa+Monica%2C+CA+90401!2s123th%20Street%2045%20W%2C%20Santa%20Monica%2C%20CA%2090401!5e0!3m2!1sen!2sin!4v1739340000000!5m2!1sen!2sin"
     style={{
       position: 'absolute',
-      top: '40px',
+      top: '50px',
       left: '0',
       width: '90%',
       height: '80%',
