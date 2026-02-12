@@ -85,7 +85,7 @@ export default function Home() {
       {/* About SECTION*/}
       <section
         // Light beige background like the template
-        className="bg-[#e8dcc8] py-20"
+        className="bg-[#f4f1e3] py-20"
       >
         {/* Centered container with max width */}
         <div className="max-w-7xl mx-auto px-20 py-0 grid md:grid-cols-2 gap-16 items-center">
@@ -441,7 +441,7 @@ export default function Home() {
       </section>
 
       {/* ================= TESTIMONIALS ================= */}
-      <section className="bg-[#f3efe8] py-20 px-6">
+      <section className="bg-[#f4f1e3] py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Title */}
           <h2 className="text-7xl md:text-5xl font-serif font-semibold text-[#803E39] mb-6">
@@ -573,38 +573,58 @@ export default function Home() {
       </section>
 
       {/* FAQ SECTION */}
-      <section className="bg-[#f7f3ec] py-20">
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          {/* LEFT IMAGE */}
-          <div className="rounded-t-full overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
-              alt="Decorative flowers"
-              className="w-full h-full object-cover"
-            />
-          </div>
+<section className="bg-[#f7f3ec] py-24">
+  <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    
+    {/* LEFT IMAGE */}
+    <div className="rounded-t-full overflow-hidden shadow-md">
+      <img
+        src="/WhyTherapy2.jpg"
+        alt="Calm therapy office plant"
+        className="w-full h-[500px] object-cover"
+      />
+    </div>
 
-          {/* RIGHT CONTENT */}
-          <div>
-            <h2 className="text-4xl font-semibold mb-8">FAQs</h2>
+    {/* RIGHT CONTENT */}
+    <div>
+      <h2 className="text-4xl md:text-5xl font-semibold text-[#803E39] mb-10">
+        Frequently Asked Questions
+      </h2>
 
-            <AccordionItem
-              title="Do you take insurance?"
-              content="I am an out-of-network provider. I’m happy to provide documentation for reimbursement if your plan allows."
-            />
+      <AccordionItem
+        title="Do you offer in-person or virtual sessions?"
+        content="I offer both in-person sessions in my Santa Monica office and secure telehealth sessions for clients located anywhere in California. We can decide together which format feels most supportive for you."
+      />
 
-            <AccordionItem
-              title="What are your rates?"
-              content="Sessions are 50 minutes. Please contact me for current rates and availability."
-            />
+      <AccordionItem
+        title="What types of concerns do you typically work with?"
+        content="I primarily work with adults experiencing anxiety, trauma, burnout, perfectionism, and relationship challenges. Many of my clients are high-achieving professionals who feel outwardly successful but internally overwhelmed."
+      />
 
-            <AccordionItem
-              title="Do you have any openings?"
-              content="Availability changes regularly. Please reach out to check current openings."
-            />
-          </div>
-        </div>
-      </section>
+      <AccordionItem
+        title="How long does therapy usually take?"
+        content="Therapy is not one-size-fits-all. Some clients come for short-term support around a specific issue, while others choose longer-term work for deeper trauma processing and personal growth. We regularly check in about progress and goals."
+      />
+
+      <AccordionItem
+        title="Do you accept insurance?"
+        content="I am an out-of-network provider. I can provide a superbill that you may submit to your insurance company for potential reimbursement, depending on your plan."
+      />
+
+      <AccordionItem
+        title="What happens in the first session?"
+        content="The first session is a collaborative conversation. We explore what brings you in, your history, and what you hope to change. You are never pressured to share more than feels comfortable."
+      />
+
+      <AccordionItem
+        title="How do I know if we’re a good fit?"
+        content="Therapy works best when you feel safe and understood. If after a few sessions it doesn’t feel aligned, we can openly discuss it and explore other options. Your comfort and progress matter."
+      />
+
+    </div>
+  </div>
+</section>
+
 
       {/* PROFESSIONAL BACKGROUND SECTION */}
       <section className="bg-[#e9e4dc] py-20">
