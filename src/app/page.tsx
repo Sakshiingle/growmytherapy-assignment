@@ -626,9 +626,9 @@ export default function Home() {
 </section>
 
 
-      {/* PROFESSIONAL BACKGROUND SECTION */}
-      <section className="bg-[#e9e4dc] py-20">
-        <div className="max-w-4xl mx-auto px-6">
+{/* PROFESSIONAL BACKGROUND SECTION */}
+      <section className="bg-[#f4f1e3] py-20">
+        <div className="max-w-5xl mx-auto px-6">
           {/* Section Title */}
           <h2 className="text-4xl font-semibold text-center mb-12">
             My Professional Background
@@ -636,23 +636,35 @@ export default function Home() {
 
           {/* Accordion Item: Education */}
           <AccordionItem
-            title="Education"
-            content="Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moluccella gladiolus cirsium trollius anthurium prunus delphinium achillea."
-          />
+  title="Education"
+  content={[
+    "• PsyD, Clinical Psychology",
+    "• MA, Counseling Psychology"
+  ].join('\n')}
+/>
 
           {/* Accordion Item: Licensure */}
           <AccordionItem
             title="Licensure"
-            content="Licensed Clinical Psychologist (PsyD). State licensure details and regulatory compliance information."
+            content={[
+    "• Licensed Clinical Psychologist, California",
+    "• EMDR Certified Therapist",
+    "• CBT for Anxiety Specialist",
+    "• Trauma-Focused Therapy Training"
+  ].join('\n')}
           />
 
           {/* Accordion Item: Certifications */}
           <AccordionItem
             title="Certifications"
-            content="CBT, EMDR, Mindfulness-based therapy certifications."
+            content={[
+    "• California Psychological Association",
+    "• EMDR International Association"
+  ].join('\n')}
           />
         </div>
       </section>
+
 
       {/* GET STARTED TODAY SECTION */}
       <section className="bg-[#7a7745] py-28 text-center">
@@ -714,6 +726,8 @@ export default function Home() {
     </>
   );
 }
+
+
 
 // Reusable Accordion Item Component
 function AccordionItem({ title, content }: { title: string; content: string }) {
