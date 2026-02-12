@@ -232,8 +232,10 @@ export default function ContactPage() {
 
         </div>
       </section>
+
+
           {/* MY OFFICE SECTION */}
-      <section style={{ backgroundColor: '#8a9365', padding: '0' }}>
+      <section id="my-office" style={{ backgroundColor: '#8a9365', padding: '0' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '500px' }}>
           
           {/* LEFT COLUMN - Office Info */}

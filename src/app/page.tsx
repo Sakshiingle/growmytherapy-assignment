@@ -7,36 +7,32 @@ import Link from "next/link";
 
 export default function Home() {
   const testimonials = [
-  {
-    quote:
-      "Working with Dr. Maya helped me understand my anxiety in a way I never had before. I feel more grounded and less reactive in my daily life.",
-    author: "Client, Santa Monica",
-  },
-  {
-    quote:
-      "I came in feeling burned out and constantly overwhelmed. Therapy became the one place where I could slow down and reconnect with myself.",
-    author: "Professional Client",
-  },
-  {
-    quote:
-      "The combination of practical tools and deeper work made a real difference. I finally feel like I’m responding to life instead of bracing for it.",
-    author: "Telehealth Client, CA",
-  },
-];
+    {
+      quote:
+        "Working with Dr. Maya helped me understand my anxiety in a way I never had before. I feel more grounded and less reactive in my daily life.",
+      author: "Client, Santa Monica",
+    },
+    {
+      quote:
+        "I came in feeling burned out and constantly overwhelmed. Therapy became the one place where I could slow down and reconnect with myself.",
+      author: "Professional Client",
+    },
+    {
+      quote:
+        "The combination of practical tools and deeper work made a real difference. I finally feel like I’m responding to life instead of bracing for it.",
+      author: "Telehealth Client, CA",
+    },
+  ];
 
-const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(0);
 
-const prevSlide = () => {
-  setCurrent((prev) =>
-    prev === 0 ? testimonials.length - 1 : prev - 1
-  );
-};
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  };
 
-const nextSlide = () => {
-  setCurrent((prev) =>
-    prev === testimonials.length - 1 ? 0 : prev + 1
-  );
-};
+  const nextSlide = () => {
+    setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <>
@@ -149,329 +145,432 @@ const nextSlide = () => {
         </div>
       </section>
 
-{/* ================= Our SPECIALTIES - DR. MAYA ================= */}
-<section
-  style={{
-    padding: "50px 20px",
-    backgroundColor: "#f4efe8",
-    textAlign: "center",
-  }}
->
-  <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
-    <h2
-      style={{
-        fontSize: "clamp(px, 6vw, 52px)",
-        fontWeight: 600,
-        color: "#350905",
-        marginBottom: "54px",
-        fontFamily: "Lora, serif",
-      }}
-    >
-      Our Specialties
-    </h2>
-
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-        gap: "40px",
-      }}
-    >
-      {/* Specialty 1: Anxiety */}
-      <div
+      {/* ================= Our SPECIALTIES - DR. MAYA ================= */}
+      <section
         style={{
-          padding: "48px 32px",
-          backgroundColor: "white",
-          borderRadius: "24px",
-          boxShadow: "0 12px 40px rgba(0,0,0,0.08)",
+          padding: "50px 20px",
+          backgroundColor: "#f4efe8",
+          textAlign: "center",
         }}
       >
-        <div
-          style={{
-            width: "80px",
-            height: "80px",
-            backgroundColor: "#e8dcc8",
-            borderRadius: "20px",
-            margin: "0 auto 8px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "32px",
-          }}
-        >
-          🧠
+        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
+          <h2
+            style={{
+              fontSize: "clamp(px, 6vw, 52px)",
+              fontWeight: 600,
+              color: "#350905",
+              marginBottom: "54px",
+              fontFamily: "Lora, serif",
+            }}
+          >
+            Our Specialties
+          </h2>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+              gap: "40px",
+            }}
+          >
+            {/* Specialty 1: Anxiety */}
+            <div
+              style={{
+                padding: "48px 32px",
+                backgroundColor: "white",
+                borderRadius: "24px",
+                boxShadow: "0 12px 40px rgba(0,0,0,0.08)",
+              }}
+            >
+              <div
+                style={{
+                  width: "80px",
+                  height: "80px",
+                  backgroundColor: "#e8dcc8",
+                  borderRadius: "20px",
+                  margin: "0 auto 8px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "32px",
+                }}
+              >
+                🧠
+              </div>
+
+              <h3
+                style={{
+                  fontSize: "28px",
+                  color: "#2f3b1f",
+                  marginBottom: "16px",
+                  fontFamily: "Lora, serif",
+                }}
+              >
+                Anxiety & Panic
+              </h3>
+              <p
+                style={{
+                  fontSize: "18px",
+                  color: "#5a6a4a",
+                  lineHeight: 1.6,
+                  fontFamily: "Inter, sans-serif",
+                }}
+              >
+                CBT and mindfulness for constant worry, tension, overthinking,
+                and panic attacks.
+              </p>
+            </div>
+
+            {/* Specialty 2: Trauma */}
+            <div
+              style={{
+                padding: "48px 32px",
+                backgroundColor: "white",
+                borderRadius: "24px",
+                boxShadow: "0 12px 40px rgba(0,0,0,0.08)",
+              }}
+            >
+              <div
+                style={{
+                  width: "80px",
+                  height: "80px",
+                  backgroundColor: "#e8dcc8",
+                  borderRadius: "20px",
+                  margin: "0 auto 8px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "32px",
+                }}
+              >
+                💔
+              </div>
+
+              <h3
+                style={{
+                  fontSize: "28px",
+                  color: "#2f3b1f",
+                  marginBottom: "16px",
+                  fontFamily: "Lora, serif",
+                }}
+              >
+                Trauma Therapy
+              </h3>
+              <p
+                style={{
+                  fontSize: "18px",
+                  color: "#5a6a4a",
+                  lineHeight: 1.6,
+                  fontFamily: "Inter, sans-serif",
+                }}
+              >
+                EMDR for single-incident trauma and complex patterns from
+                childhood or relationships.
+              </p>
+            </div>
+
+            {/* Specialty 3: Burnout */}
+            <div
+              style={{
+                padding: "48px 32px",
+                backgroundColor: "white",
+                borderRadius: "24px",
+                boxShadow: "0 12px 40px rgba(0,0,0,0.08)",
+              }}
+            >
+              <div
+                style={{
+                  width: "80px",
+                  height: "80px",
+                  backgroundColor: "#e8dcc8",
+                  borderRadius: "20px",
+                  margin: "0 auto 8px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "32px",
+                }}
+              >
+                🔥
+              </div>
+
+              <h3
+                style={{
+                  fontSize: "28px",
+                  color: "#2f3b1f",
+                  marginBottom: "16px",
+                  fontFamily: "Lora, serif",
+                }}
+              >
+                Burnout Recovery
+              </h3>
+              <p
+                style={{
+                  fontSize: "18px",
+                  color: "#5a6a4a",
+                  lineHeight: 1.6,
+                  fontFamily: "Inter, sans-serif",
+                }}
+              >
+                Support for high-achievers, entrepreneurs, and professionals
+                feeling exhausted.
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <h3
-          style={{
-            fontSize: "28px",
-            color: "#2f3b1f",
-            marginBottom: "16px",
-            fontFamily: "Lora, serif",
-          }}
-        >
-          Anxiety & Panic
-        </h3>
-        <p
-          style={{
-            fontSize: "18px",
-            color: "#5a6a4a",
-            lineHeight: 1.6,
-            fontFamily: "Inter, sans-serif",
-          }}
-        >
-          CBT and mindfulness for constant worry, tension, overthinking,
-          and panic attacks.
-        </p>
-      </div>
+      {/* Service section: How I Can Support You - 4 Services*/}
+      <section className="bg-[#f5f1ea] py-0 px-6 md:px-12">
+        <div className="max-w-6xl ">
+          {/* Section Title */}
+          <div className="text-center mb-16">
+            <h2 className="text-7xl md:text-5xl font-serif font-semibold text-[#350905] mb-6">
+              How I Can Support You
+            </h2>
+            <p className="text-lg text-[#350905] max-w-2xl mx-auto leading-relaxed">
+              Support that is practical, grounded, and tailored to your unique
+              experience.
+            </p>
+          </div>
 
-      {/* Specialty 2: Trauma */}
-      <div
-        style={{
-          padding: "48px 32px",
-          backgroundColor: "white",
-          borderRadius: "24px",
-          boxShadow: "0 12px 40px rgba(0,0,0,0.08)",
-        }}
-      >
-        <div
-          style={{
-            width: "80px",
-            height: "80px",
-            backgroundColor: "#e8dcc8",
-            borderRadius: "20px",
-            margin: "0 auto 8px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "32px",
-          }}
-        >
-          💔
+          {/* SERVICE 1 */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <img
+              src="/Therapy1.jpg"
+              alt="Anxiety Therapy Session"
+              className="rounded-xl shadow-md w-full h-[400px] object-cover"
+            />
+            <div>
+              <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
+                Anxiety & Emotional Regulation
+              </h3>
+              <p className="text-[#1f1f1f] mb-6 leading-relaxed">
+                For professionals who feel constantly on edge, overthink
+                everything, or struggle to slow their mind. Together, we reduce
+                panic, physical tension, and chronic worry while building
+                practical tools for emotional balance.
+              </p>
+              <a
+                href="/blog"
+                className="text-[#6b4c3b] hover:underline font-medium"
+              >
+                Learn More →
+              </a>
+            </div>
+          </div>
+
+          {/* SERVICE 2 */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div className="order-2 md:order-1">
+              <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
+                Trauma & Somatic Healing
+              </h3>
+              <p className="text-[#1f1f1f] mb-6 leading-relaxed">
+                For adults carrying the impact of past experiences that still
+                affect relationships, confidence, or sense of safety. We
+                integrate EMDR and body-based approaches to gently process
+                trauma while strengthening nervous system regulation.
+              </p>
+              <a
+                href="/blog"
+                className="text-[#6b4c3b] hover:underline font-medium"
+              >
+                Learn More →
+              </a>
+            </div>
+            <img
+              src="/Therapy2.jpg"
+              alt="Trauma Therapy Illustration"
+              className="rounded-xl shadow-md w-full h-[400px] object-cover order-1 md:order-2"
+            />
+          </div>
+
+          {/* SERVICE 3 */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <img
+              src="/Therapy8.jpg"
+              alt="Burnout Therapy Session"
+              className="rounded-xl shadow-md w-full h-[400px] object-cover"
+            />
+            <div>
+              <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
+                Burnout & High-Performance Stress
+              </h3>
+              <p className="text-[#1f1f1f] mb-6 leading-relaxed">
+                For high-achieving professionals and creatives who feel
+                exhausted despite outward success. We address perfectionism,
+                internal pressure, and work-life imbalance to create sustainable
+                ways of living and working.
+              </p>
+              <a
+                href="/blog"
+                className="text-[#6b4c3b] hover:underline font-medium"
+              >
+                Learn More →
+              </a>
+            </div>
+          </div>
+
+          {/* SERVICE 4 */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
+                Relationship & Attachment Patterns
+              </h3>
+              <p className="text-[#1f1f1f] mb-6 leading-relaxed">
+                For individuals navigating dating struggles, emotional distance,
+                or repeated conflict. Therapy becomes a space to understand
+                patterns, build healthier connection skills, and feel more
+                secure in relationships.
+              </p>
+              <a
+                href="/blog"
+                className="text-[#6b4c3b] hover:underline font-medium"
+              >
+                Learn More →
+              </a>
+            </div>
+            <img
+              src="/Therapy3.jpg"
+              alt="Calm Therapy Room"
+              className="rounded-xl shadow-md w-full h-[400px] object-cover order-1 md:order-2"
+            />
+          </div>
         </div>
+      </section>
 
-        <h3
-          style={{
-            fontSize: "28px",
-            color: "#2f3b1f",
-            marginBottom: "16px",
-            fontFamily: "Lora, serif",
-          }}
-        >
-          Trauma Therapy
-        </h3>
-        <p
-          style={{
-            fontSize: "18px",
-            color: "#5a6a4a",
-            lineHeight: 1.6,
-            fontFamily: "Inter, sans-serif",
-          }}
-        >
-          EMDR for single-incident trauma and complex patterns from
-          childhood or relationships.
-        </p>
-      </div>
+      {/* ================= TESTIMONIALS ================= */}
+      <section className="bg-[#f3efe8] py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Title */}
+          <h2 className="text-7xl md:text-5xl font-serif font-semibold text-[#803E39] mb-6">
+            Kind Words From Clients
+          </h2>
 
-      {/* Specialty 3: Burnout */}
-      <div
-        style={{
-          padding: "48px 32px",
-          backgroundColor: "white",
-          borderRadius: "24px",
-          boxShadow: "0 12px 40px rgba(0,0,0,0.08)",
-        }}
-      >
-        <div
-          style={{
-            width: "80px",
-            height: "80px",
-            backgroundColor: "#e8dcc8",
-            borderRadius: "20px",
-            margin: "0 auto 8px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "32px",
-          }}
-        >
-          🔥
+          {/* Card */}
+          <div className="relative bg-white rounded-2xl shadow-md px-10 py-10 transition-all duration-500">
+            <p className="text-lg md:text-xl text-[#350905] leading-relaxed mb-8">
+              “{testimonials[current].quote}”
+            </p>
+
+            <p className="text-sm text-[#350905] font-medium">
+              — {testimonials[current].author}
+            </p>
+
+            {/* Navigation */}
+            <div className="flex justify-center gap-8 mt-10">
+              <button
+                onClick={prevSlide}
+                className="text-[#803E39] border border-[#803E39] px-5 py-2 rounded-full hover:bg-[#803E39] hover:text-white transition"
+              >
+                ←
+              </button>
+
+              <button
+                onClick={nextSlide}
+                className="text-[#803E39] border border-[#803E39] px-5 py-2 rounded-full hover:bg-[#803E39] hover:text-white transition"
+              >
+                →
+              </button>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <h3
-          style={{
-            fontSize: "28px",
-            color: "#2f3b1f",
-            marginBottom: "16px",
-            fontFamily: "Lora, serif",
-          }}
-        >
-          Burnout Recovery
-        </h3>
-        <p
-          style={{
-            fontSize: "18px",
-            color: "#5a6a4a",
-            lineHeight: 1.6,
-            fontFamily: "Inter, sans-serif",
-          }}
-        >
-          Support for high-achievers, entrepreneurs, and professionals
-          feeling exhausted.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+      {/* My Office SECTION */}
+      <section className="bg-gradient-to-br from-[#fbf7f1] to-[#f8f4f0] py-15 px-6 md:px-12 lg:px-2">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-20 lg:mb-28">
+            <h2 className="text-7xl md:text-5xl font-serif font-semibold text-[#350905] mb-6">
+              A Calm Space for Healing
+            </h2>
+            <p className="text-lg text-[#350905] max-w-2xl mx-auto leading-relaxed">
+              My Santa Monica office is designed to feel instantly grounding—a
+              quiet, private space with natural light and comfortable,
+              uncluttered surroundings.
+            </p>
+            {/* Updated Address Box  + clickable link to Contact #my-office */}
+            <div className="mt-8">
+              <Link
+                href="/contact#my-office"
+                className="group inline-flex items-center gap-3 text-lg font-medium text-[#2f3b1f] hover:text-[#6b4c3b] transition-all duration-300 cursor-pointer bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 hover:bg-white/100 border border-[#fbf7f1]/50 hover:border-[#6b4c3b]/30"
+              >
+                <svg
+                  className="w-6 h-6 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <span className="underline decoration-2 underline-offset-4 group-hover:decoration-[#6b4c3b] transition-all">
+                  123th Street 45 W, Santa Monica, CA 90401
+                </span>
+                <svg
+                  className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-all"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </div>
 
- {/* Service section: How I Can Support You - 4 Services*/}
- <section className="bg-[#f5f1ea] py-0 px-6 md:px-12">
-  <div className="max-w-6xl ">
+          {/* Office Images Gallery */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 mb-16 max-w-4xl mx-auto">
+            {/* Office 1 - Square */}
+            <div className="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 aspect-square border-4 border-[#803E39]">
+              <Image
+                src="/Office1.jpeg"
+                alt="Dr. Maya Reynolds Santa Monica therapy office - natural light therapy room"
+                fill
+                className="object-cover hover:scale-110 transition-transform duration-700 group-hover:scale-110"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#6b4c3b]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
 
-    {/* Section Title */}
-    <div className="text-center mb-16">
-      <h2 className="text-7xl md:text-5xl font-serif font-semibold text-[#350905] mb-6">
-        How I Can Support You
-      </h2>
-      <p className="text-lg text-[#350905] max-w-2xl mx-auto leading-relaxed">
-        Support that is practical, grounded, and tailored to your unique experience.
-      </p>
-    </div>
-
-    {/* SERVICE 1 */}
-    <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-      <img
-        src="/Therapy1.jpg"
-        alt="Anxiety Therapy Session"
-        className="rounded-xl shadow-md w-full h-[400px] object-cover"
-      />
-      <div>
-        <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
-          Anxiety & Emotional Regulation
-        </h3>
-        <p className="text-[#1f1f1f] mb-6 leading-relaxed">
-          For professionals who feel constantly on edge, overthink everything, or struggle to slow their mind. 
-          Together, we reduce panic, physical tension, and chronic worry while building practical tools 
-          for emotional balance.
-        </p>
-        <a href="/blog" className="text-[#6b4c3b] hover:underline font-medium">
-          Learn More →
-        </a>
-      </div>
-    </div>
-
-    {/* SERVICE 2 */}
-    <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-      <div className="order-2 md:order-1">
-        <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
-          Trauma & Somatic Healing
-        </h3>
-        <p className="text-[#1f1f1f] mb-6 leading-relaxed">
-          For adults carrying the impact of past experiences that still affect relationships, confidence, 
-          or sense of safety. We integrate EMDR and body-based approaches to gently process trauma 
-          while strengthening nervous system regulation.
-        </p>
-        <a href="/blog" className="text-[#6b4c3b] hover:underline font-medium">
-          Learn More →
-        </a>
-      </div>
-      <img
-        src="/Therapy2.jpg"
-        alt="Trauma Therapy Illustration"
-        className="rounded-xl shadow-md w-full h-[400px] object-cover order-1 md:order-2"
-      />
-    </div>
-
-    {/* SERVICE 3 */}
-    <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-      <img
-        src="/Therapy8.jpg"
-        alt="Burnout Therapy Session"
-        className="rounded-xl shadow-md w-full h-[400px] object-cover"
-      />
-      <div>
-        <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
-          Burnout & High-Performance Stress
-        </h3>
-        <p className="text-[#1f1f1f] mb-6 leading-relaxed">
-          For high-achieving professionals and creatives who feel exhausted despite outward success. 
-          We address perfectionism, internal pressure, and work-life imbalance to create 
-          sustainable ways of living and working.
-        </p>
-        <a href="/blog" className="text-[#6b4c3b] hover:underline font-medium">
-          Learn More →
-        </a>
-      </div>
-    </div>
-
-    {/* SERVICE 4 */}
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-      <div className="order-2 md:order-1">
-        <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
-          Relationship & Attachment Patterns
-        </h3>
-        <p className="text-[#1f1f1f] mb-6 leading-relaxed">
-          For individuals navigating dating struggles, emotional distance, or repeated conflict. 
-          Therapy becomes a space to understand patterns, build healthier connection skills, 
-          and feel more secure in relationships.
-        </p>
-        <a href="/blog" className="text-[#6b4c3b] hover:underline font-medium">
-          Learn More →
-        </a>
-      </div>
-      <img
-        src="/Therapy3.jpg"
-        alt="Calm Therapy Room"
-        className="rounded-xl shadow-md w-full h-[400px] object-cover order-1 md:order-2"
-      />
-    </div>
-
-  </div>
-</section>
-
-
- 
-
-{/* ================= TESTIMONIALS ================= */}
-<section className="bg-[#f3efe8] py-20 px-6">
-  <div className="max-w-4xl mx-auto text-center">
-
-    {/* Title */}
-    <h2 className="text-7xl md:text-5xl font-serif font-semibold text-[#803E39] mb-6">
-      Kind Words From Clients
-    </h2>
-
-    {/* Card */}
-    <div className="relative bg-white rounded-2xl shadow-md px-10 py-10 transition-all duration-500">
-
-      <p className="text-lg md:text-xl text-[#350905] leading-relaxed mb-8">
-        “{testimonials[current].quote}”
-      </p>
-
-      <p className="text-sm text-[#350905] font-medium">
-        — {testimonials[current].author}
-      </p>
-
-      {/* Navigation */}
-      <div className="flex justify-center gap-8 mt-10">
-        <button
-          onClick={prevSlide}
-          className="text-[#803E39] border border-[#803E39] px-5 py-2 rounded-full hover:bg-[#803E39] hover:text-white transition"
-        >
-          ←
-        </button>
-
-        <button
-          onClick={nextSlide}
-          className="text-[#803E39] border border-[#803E39] px-5 py-2 rounded-full hover:bg-[#803E39] hover:text-white transition"
-        >
-          →
-        </button>
-      </div>
-    </div>
-  </div>
-</section> 
-
+            {/* Office 2 - Square */}
+            <div className="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 aspect-square border-4 border-[#803E39]">
+              <Image
+                src="/Office2.jpeg"
+                alt="Comfortable therapy seating area Dr. Maya Reynolds office Santa Monica"
+                fill
+                className="object-cover hover:scale-110 transition-transform duration-700 group-hover:scale-110"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#6b4c3b]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
+          </div>
+          {/* Closing CTA */}
+          <div className="text-center mt-12">
+            <p className="text-xl md:text-2xl text-[#2f3b1f] max-w-[80%] mx-auto leading-relaxed mb-10">
+              Offering in-person therapy in a calm, private Santa Monica office
+              and secure telehealth sessions throughout California. Ready to
+              take the first step?
+            </p>
+            <a
+              href="/contact#appointment"
+              className="inline-block bg-[#803E39] hover:bg-[#6f332f] text-white px-12 py-4 rounded-full font-medium text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 font-sans active:scale-[0.98] mx-auto"
+            >
+              Book Your Session
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ SECTION */}
       <section className="bg-[#f7f3ec] py-20">
