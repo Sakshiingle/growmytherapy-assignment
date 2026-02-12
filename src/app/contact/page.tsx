@@ -271,13 +271,7 @@ throughout California. Book a free consultation below.
             color: 'white'
           }}>
             
-            <h2 style={{ 
-              fontSize: '56px', 
-              fontWeight: 'bold', 
-              marginBottom: '40px', 
-              fontFamily: 'serif',
-              lineHeight: '1.2'
-            }}>
+            <h2 className="text-7xl md:text-5xl font-serif font-semibold text-white mb-6">
               My Office
             </h2>
             
@@ -325,17 +319,11 @@ throughout California. Book a free consultation below.
 
 
 {/* FIND ME ON SOCIAL SECTION */}
-<section style={{ backgroundColor: '#fbf7f1', padding: '80px 20px' }}>
-  <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+<section style={{ backgroundColor: '#fbf7f1', padding: '40px 25px' }}>
+  <div style={{ maxWidth: '1400px', margin: 'auto' }}>
     
-    <h2 style={{ 
-      fontSize: '56px', 
-      fontWeight: 'bold', 
-      color: '#2f3b1f', 
-      marginBottom: '50px',
-      fontFamily: 'serif'
-    }}>
-      Find me on social.
+    <h2 className="text-7xl md:text-5xl text-center font-serif font-semibold text-[#350905] mb-6">
+      Find me on social
     </h2>
     
     {/* Add CSS for hover effect */}
@@ -363,7 +351,7 @@ throughout California. Book a free consultation below.
       {/* Image 1 */}
       <a href="https://instagram.com" target="_blank">
         <img 
-          src="/contact1.jpg" 
+          src="/Insta1.jpg" 
           alt="Instagram post 1"
           className="social-image"
         />
@@ -372,7 +360,7 @@ throughout California. Book a free consultation below.
       {/* Image 2 */}
       <a href="https://instagram.com" target="_blank">
         <img 
-          src="/contact2.jpg" 
+          src="/Insta2.jpg" 
           alt="Instagram post 2"
           className="social-image"
         />
@@ -381,7 +369,7 @@ throughout California. Book a free consultation below.
       {/* Image 3 */}
       <a href="https://instagram.com" target="_blank">
         <img 
-          src="/blog_post3.jpg" 
+          src="/Insta3.jpg" 
           alt="Instagram post 3"
           className="social-image"
         />
@@ -390,7 +378,7 @@ throughout California. Book a free consultation below.
       {/* Image 4 */}
       <a href="https://instagram.com" target="_blank">
         <img 
-          src="/blog_post4.jpg" 
+          src="/Insta.jpg" 
           alt="Instagram post 4"
           className="social-image"
         />
