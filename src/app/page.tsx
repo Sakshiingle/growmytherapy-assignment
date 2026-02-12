@@ -57,14 +57,14 @@ export default function Home() {
       {/* About SECTION*/}
       <section
         // Light beige background like the template
-        className="bg-[#e8dcc8] py-10"
+        className="bg-[#e8dcc8] py-20"
       >
         {/* Centered container with max width */}
         <div className="max-w-7xl mx-auto px-20 py-0 grid md:grid-cols-2 gap-16 items-center">
           {/* LEFT SIDE: Text content */}
           <div>
             {/* Section heading */}
-            <h2 className="text-4xl md:text-5xl font-serif text-[#350905] mb-6">
+            <h2 className="text-5xl md:text-5xl font-clamp text-[#350905] mb-6">
               About Dr.Maya Reynolds
             </h2>
 
@@ -120,7 +120,7 @@ export default function Home() {
 {/* ================= Our SPECIALTIES - DR. MAYA ================= */}
 <section
   style={{
-    padding: "100px 20px",
+    padding: "50px 20px",
     backgroundColor: "#f4efe8",
     textAlign: "center",
   }}
@@ -128,10 +128,10 @@ export default function Home() {
   <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
     <h2
       style={{
-        fontSize: "clamp(36px, 6vw, 52px)",
+        fontSize: "clamp(px, 6vw, 52px)",
         fontWeight: 600,
-        color: "#2f3b1f",
-        marginBottom: "64px",
+        color: "#350905",
+        marginBottom: "54px",
         fontFamily: "Lora, serif",
       }}
     >
@@ -292,58 +292,117 @@ export default function Home() {
   </div>
 </section>
 
- {/* Service section */}
+ {/* Service section: How I Can Support You - 4 Services*/}
+ <section className="bg-[#f5f1ea] py-0 px-6 md:px-12">
+  <div className="max-w-6xl ">
+
+    {/* Section Title */}
+    <div className="text-center mb-16">
+      <h2 className="text-7xl md:text-5xl font-clamp text-[#350905] mb-6">
+        How I Can Support You
+      </h2>
+      <p className="text-lg text-[#350905] max-w-2xl mx-auto leading-relaxed">
+        Support that is practical, grounded, and tailored to your unique experience.
+      </p>
+    </div>
+
+    {/* SERVICE 1 */}
+    <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <img
+        src="/Therapy1.jpg"
+        alt="Anxiety Therapy Session"
+        className="rounded-xl shadow-md w-full h-[420px] object-cover"
+      />
+      <div>
+        <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
+          Anxiety & Emotional Regulation
+        </h3>
+        <p className="text-[#1f1f1f] mb-6 leading-relaxed">
+          For professionals who feel constantly on edge, overthink everything, or struggle to slow their mind. 
+          Together, we reduce panic, physical tension, and chronic worry while building practical tools 
+          for emotional balance.
+        </p>
+        <a href="/blog" className="text-[#6b4c3b] hover:underline font-medium">
+          Learn More →
+        </a>
+      </div>
+    </div>
+
+    {/* SERVICE 2 */}
+    <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <div className="order-2 md:order-1">
+        <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
+          Trauma & Somatic Healing
+        </h3>
+        <p className="text-[#1f1f1f] mb-6 leading-relaxed">
+          For adults carrying the impact of past experiences that still affect relationships, confidence, 
+          or sense of safety. We integrate EMDR and body-based approaches to gently process trauma 
+          while strengthening nervous system regulation.
+        </p>
+        <a href="/blog" className="text-[#6b4c3b] hover:underline font-medium">
+          Learn More →
+        </a>
+      </div>
+      <img
+        src="/Therapy2.jpg"
+        alt="Trauma Therapy Illustration"
+        className="rounded-xl shadow-md w-full h-[420px] object-cover order-1 md:order-2"
+      />
+    </div>
+
+    {/* SERVICE 3 */}
+    <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <img
+        src="/Therapy8.jpg"
+        alt="Burnout Therapy Session"
+        className="rounded-xl shadow-md w-full h-[420px] object-cover"
+      />
+      <div>
+        <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
+          Burnout & High-Performance Stress
+        </h3>
+        <p className="text-[#1f1f1f] mb-6 leading-relaxed">
+          For high-achieving professionals and creatives who feel exhausted despite outward success. 
+          We address perfectionism, internal pressure, and work-life imbalance to create 
+          sustainable ways of living and working.
+        </p>
+        <a href="/blog" className="text-[#6b4c3b] hover:underline font-medium">
+          Learn More →
+        </a>
+      </div>
+    </div>
+
+    {/* SERVICE 4 */}
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="order-2 md:order-1">
+        <h3 className="text-2xl md:text-3xl font-semibold text-[#2f3b1f] mb-4 tracking-tight">
+          Relationship & Attachment Patterns
+        </h3>
+        <p className="text-[#1f1f1f] mb-6 leading-relaxed">
+          For individuals navigating dating struggles, emotional distance, or repeated conflict. 
+          Therapy becomes a space to understand patterns, build healthier connection skills, 
+          and feel more secure in relationships.
+        </p>
+        <a href="/blog" className="text-[#6b4c3b] hover:underline font-medium">
+          Learn More →
+        </a>
+      </div>
+      <img
+        src="/Therapy3.jpg"
+        alt="Calm Therapy Room"
+        className="rounded-xl shadow-md w-full h-[420px] object-cover order-1 md:order-2"
+      />
+    </div>
+
+  </div>
+</section>
 
 
-      {/* SUPPORT SECTION — You don’t have to do this alone */}
-      <section className="bg-[#d6d3db] py-24">
-        {/* Wrapper to keep content centered */}
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
-          {/* LEFT: Image */}
-          <div className="md:w-1/2 w-full">
-            <Image
-              src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca"
-              alt="Person finding calm"
-              width={600}
-              height={700}
-              className="rounded-lg object-cover"
-            />
-          </div>
+ 
 
-          {/* RIGHT: Text Content */}
-          <div className="md:w-1/2 w-full text-gray-800">
-            {/* Section heading */}
-            <h2 className="text-4xl font-serif font-bold mb-6">
-              You don’t have to do this all alone.
-            </h2>
 
-            {/* Intro line */}
-            <p className="mb-6">
-              If you are facing any of these, there’s hope:
-            </p>
+      
 
-            {/* Bullet list */}
-            <ul className="space-y-3 mb-8 list-disc list-inside">
-              <li>Persistent feelings of sadness or hopelessness</li>
-              <li>Trouble focusing or making decisions</li>
-              <li>Difficulty maintaining relationships</li>
-              <li>Feeling constantly exhausted or unmotivated</li>
-              <li>A pervasive sense of being overwhelmed</li>
-            </ul>
-
-            {/* Supporting text */}
-            <p className="mb-8">
-              With empathy and guidance, we’ll work together to navigate the
-              challenges life throws your way.
-            </p>
-
-            {/* CTA button */}
-            <button className="border border-gray-800 px-8 py-3 uppercase text-sm tracking-wide hover:bg-gray-800 hover:text-white transition">
-              Work with me →
-            </button>
-          </div>
-        </div>
-      </section>
       {/* ABOUT SECTION — Hi, I’m Lilac */}
       <section className="bg-[#f6f1ea] py-24">
         {/* Centered container */}
