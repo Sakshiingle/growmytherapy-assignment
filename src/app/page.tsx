@@ -132,7 +132,7 @@ export default function Home() {
     {/* RIGHT SIDE: Image */}
     <div className="order-1 lg:order-2 w-full h-75 md:h-100 lg:h-125 relative rounded-lg overflow-hidden mx-auto lg:mx-0 shadow-xl">
       <Image
-        src="/images/about.jpg"
+        src="about.jpg"
         alt="Dr. Maya Reynolds"
         fill
         className="object-cover hover:scale-105 transition-all duration-500"
@@ -143,184 +143,65 @@ export default function Home() {
 </section>
 
 
-      {/* ================= Our SPECIALTIES - DR. MAYA ================= */}
-      <section
-        style={{
-          padding: "50px 20px",
-          backgroundColor: "#f4efe8",
-          textAlign: "center",
-        }}
-      >
-        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
-          <h2
-            style={{
-              fontSize: "clamp(px, 6vw, 52px)",
-              fontWeight: 600,
-              color: "#350905",
-              marginBottom: "54px",
-              fontFamily: "Lora, serif",
-            }}
-          >
-            Our Specialties
-          </h2>
+ {/* Specialties - 3 cols tablet/iPad + mobile 1 col */}
+<section className="bg-[#f4efe8] py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-20">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-[52px] font-serif font-semibold text-[#350905] text-center mb-8 md:mb-12 lg:mb-14 leading-tight">
+      Our Specialties
+    </h2>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-              gap: "40px",
-            }}
-          >
-            {/* Specialty 1: Anxiety */}
-            <div
-              style={{
-                padding: "48px 32px",
-                backgroundColor: "white",
-                borderRadius: "24px",
-                boxShadow: "0 12px 40px rgba(0,0,0,0.08)",
-              }}
-            >
-              <div
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  backgroundColor: "#e8dcc8",
-                  borderRadius: "20px",
-                  margin: "0 auto 8px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "32px",
-                }}
-              >
-                🧠
-              </div>
-
-              <h3
-                style={{
-                  fontSize: "28px",
-                  color: "#2f3b1f",
-                  marginBottom: "16px",
-                  fontFamily: "Lora, serif",
-                }}
-              >
-                Anxiety & Panic
-              </h3>
-              <p
-                style={{
-                  fontSize: "18px",
-                  color: "#5a6a4a",
-                  lineHeight: 1.6,
-                  fontFamily: "Inter, sans-serif",
-                }}
-              >
-                CBT and mindfulness for constant worry, tension, overthinking,
-                and panic attacks.
-              </p>
-            </div>
-
-            {/* Specialty 2: Trauma */}
-            <div
-              style={{
-                padding: "48px 32px",
-                backgroundColor: "white",
-                borderRadius: "24px",
-                boxShadow: "0 12px 40px rgba(0,0,0,0.08)",
-              }}
-            >
-              <div
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  backgroundColor: "#e8dcc8",
-                  borderRadius: "20px",
-                  margin: "0 auto 8px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "32px",
-                }}
-              >
-                💔
-              </div>
-
-              <h3
-                style={{
-                  fontSize: "28px",
-                  color: "#2f3b1f",
-                  marginBottom: "16px",
-                  fontFamily: "Lora, serif",
-                }}
-              >
-                Trauma Therapy
-              </h3>
-              <p
-                style={{
-                  fontSize: "18px",
-                  color: "#5a6a4a",
-                  lineHeight: 1.6,
-                  fontFamily: "Inter, sans-serif",
-                }}
-              >
-                EMDR for single-incident trauma and complex patterns from
-                childhood or relationships.
-              </p>
-            </div>
-
-            {/* Specialty 3: Burnout */}
-            <div
-              style={{
-                padding: "48px 32px",
-                backgroundColor: "white",
-                borderRadius: "24px",
-                boxShadow: "0 12px 40px rgba(0,0,0,0.08)",
-              }}
-            >
-              <div
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  backgroundColor: "#e8dcc8",
-                  borderRadius: "20px",
-                  margin: "0 auto 8px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "32px",
-                }}
-              >
-                🔥
-              </div>
-
-              <h3
-                style={{
-                  fontSize: "28px",
-                  color: "#2f3b1f",
-                  marginBottom: "16px",
-                  fontFamily: "Lora, serif",
-                }}
-              >
-                Burnout Recovery
-              </h3>
-              <p
-                style={{
-                  fontSize: "18px",
-                  color: "#5a6a4a",
-                  lineHeight: 1.6,
-                  fontFamily: "Inter, sans-serif",
-                }}
-              >
-                Support for high-achievers, entrepreneurs, and professionals
-                feeling exhausted.
-              </p>
-            </div>
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+      
+      {/* Anxiety */}
+      <div className="p-6 md:p-8 lg:p-12 bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center">
+        <div className="w-16 h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 bg-[#e8dcc8] rounded-2xl mx-auto mb-4 flex items-center justify-center text-2xl md:text-3xl lg:text-[32px]">
+          🧠
         </div>
-      </section>
+        <h3 className="text-xl md:text-2xl lg:text-[28px] font-serif text-[#2f3b1f] mb-3 md:mb-4 leading-tight">
+          Anxiety & Panic
+        </h3>
+        <p className="text-sm md:text-base lg:text-[18px] text-[#5a6a4a] leading-relaxed">
+          CBT and mindfulness for constant worry, tension, overthinking,
+          and panic attacks.
+        </p>
+      </div>
+
+      {/* Trauma */}
+      <div className="p-6 md:p-8 lg:p-12 bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center">
+        <div className="w-16 h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 bg-[#e8dcc8] rounded-2xl mx-auto mb-4 flex items-center justify-center text-2xl md:text-3xl lg:text-[32px]">
+          💔
+        </div>
+        <h3 className="text-xl md:text-2xl lg:text-[28px] font-serif text-[#2f3b1f] mb-3 md:mb-4 leading-tight">
+          Trauma Therapy
+        </h3>
+        <p className="text-sm md:text-base lg:text-[18px] text-[#5a6a4a] leading-relaxed">
+          EMDR for single-incident trauma and complex patterns from
+          childhood or relationships.
+        </p>
+      </div>
+
+      {/* Burnout */}
+      <div className="p-6 md:p-8 lg:p-12 bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center">
+        <div className="w-16 h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 bg-[#e8dcc8] rounded-2xl mx-auto mb-4 flex items-center justify-center text-2xl md:text-3xl lg:text-[32px]">
+          🔥
+        </div>
+        <h3 className="text-xl md:text-2xl lg:text-[28px] font-serif text-[#2f3b1f] mb-3 md:mb-4 leading-tight">
+          Burnout Recovery
+        </h3>
+        <p className="text-sm md:text-base lg:text-[18px] text-[#5a6a4a] leading-relaxed">
+          Support for high-achievers, entrepreneurs, and professionals
+          feeling exhausted.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Service section: How I Can Support You - 4 Services*/}
-      <section className="bg-[#f5f1ea] py-0 px-6 md:px-12">
-        <div className="max-w-6xl ">
+      <section className="bg-[#f5f1ea] py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+  <div className="max-w-6xl mx-auto">
+
           {/* Section Title */}
           <div className="text-center mb-16">
             <h2 className="text-7xl md:text-5xl font-serif font-semibold text-[#350905] mb-6">
@@ -456,21 +337,39 @@ export default function Home() {
               — {testimonials[current].author}
             </p>
 
-            {/* Navigation */}
-            <div className="flex justify-center gap-8 mt-10">
-              <button
-                onClick={prevSlide}
-                className="text-[#803E39] border border-[#803E39] px-5 py-2 rounded-full hover:bg-[#803E39] hover:text-white transition"
-              >
-                ←
-              </button>
+            {/* Navigation - Works EVERY device */}
+<div className="flex justify-center gap-8 mt-10">
+  <button
+    onClick={prevSlide}
+    className="
+      text-[#803E39] border-2 border-[#803E39]
+      px-5 py-2.5 md:px-6 md:py-3
+      rounded-full font-medium
+      hover:bg-[#803E39] hover:text-white
+      active:bg-[#6b332e] active:scale-95 active:text-white
+      focus:outline-none focus:ring-4 focus:ring-[#803E39]/30
+      transition-all duration-300 ease-in-out
+      shadow-md hover:shadow-lg
+    "
+  >
+    ←
+  </button>
 
-              <button
-                onClick={nextSlide}
-                className="text-[#803E39] border border-[#803E39] px-5 py-2 rounded-full hover:bg-[#803E39] hover:text-white transition"
-              >
-                →
-              </button>
+  <button
+    onClick={nextSlide}
+    className="
+      text-[#803E39] border-2 border-[#803E39]
+      px-5 py-2.5 md:px-6 md:py-3
+      rounded-full font-medium
+      hover:bg-[#803E39] hover:text-white
+      active:bg-[#6b332e] active:scale-95 active:text-white
+      focus:outline-none focus:ring-4 focus:ring-[#803E39]/30
+      transition-all duration-300 ease-in-out
+      shadow-md hover:shadow-lg
+    "
+  >
+    →
+  </button>
             </div>
           </div>
         </div>
@@ -577,7 +476,7 @@ export default function Home() {
           {/* LEFT IMAGE */}
           <div className="rounded-t-full overflow-hidden shadow-md">
             <img
-              src="/whytherapy2.jpg"
+              src="/whytherapy.jpg"
               alt="Calm therapy office plant"
               className="w-full h-96 md:h-125 object-cover"
             />
