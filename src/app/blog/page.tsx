@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function BlogPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -20,7 +21,9 @@ export default function BlogPage() {
       <section className="bg-[#f4efe8]">
         <div className="max-w-1000 mx-auto px-30  flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <img
+            <Image
+             height="500"
+             width="500"
               src="/bloghero.jpg"
               alt="Blog hero"
               className="w-full max-w-[360px] rounded-t-full"
@@ -42,7 +45,9 @@ export default function BlogPage() {
       <section className="bg-[#e7e2da] py-24">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20">
           <div>
-            <img
+            <Image
+             height="400"
+             width="400"
               src="/blog_post1.jpg"
               alt="Post 1"
               style={{ width: "100%", height: "400px", objectFit: "cover" }}
@@ -57,7 +62,9 @@ export default function BlogPage() {
           </div>
 
           <div>
-            <img
+            <Image
+              width={"400"}
+              height={"400"}
               src="/blog_post2.jpg"
               alt="Post 2"
               style={{ width: "100%", height: "400px", objectFit: "cover" }}
@@ -72,7 +79,9 @@ export default function BlogPage() {
           </div>
 
           <div>
-            <img
+            <Image
+              width={"400"}
+              height={"400"}
               src="/blog_post3.jpg"
               alt="Post 3"
               style={{ width: "100%", height: "400px", objectFit: "cover" }}
@@ -87,7 +96,9 @@ export default function BlogPage() {
           </div>
 
           <div>
-            <img
+            <Image
+              width={"400"}
+              height={"400"}
               src="/blog_post4.jpg"
               alt="Post 4"
               style={{ width: "100%", height: "400px", objectFit: "cover" }}

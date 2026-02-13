@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from 'next/image';
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -112,7 +113,8 @@ export default function ContactPage() {
                 border: "3px solid #350905db",
               }}
             >
-              <img
+              <Image
+                height="400"                width="400"
                 src="/ContactHero2.jpg"
                 alt="Lilac flowers"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -134,7 +136,8 @@ export default function ContactPage() {
                 boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
               }}
             >
-              <img
+              <Image
+                height="400"                width="400"
                 src="/ContactHero.jpg"
                 alt="White flowers"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -395,7 +398,8 @@ export default function ContactPage() {
           >
             {/* Image 1 */}
             <a href="https://instagram.com" target="_blank">
-              <img
+              <Image
+                  height="400"                width="400"
                 src="/Insta1.jpg"
                 alt="Instagram post 1"
                 className="social-image"
@@ -404,7 +408,8 @@ export default function ContactPage() {
 
             {/* Image 2 */}
             <a href="https://instagram.com" target="_blank">
-              <img
+              <Image
+                  height="400"                width="400"
                 src="/Insta2.jpg"
                 alt="Instagram post 2"
                 className="social-image"
@@ -413,7 +418,8 @@ export default function ContactPage() {
 
             {/* Image 3 */}
             <a href="https://instagram.com" target="_blank">
-              <img
+              <Image
+                  height="400"                width="400"
                 src="/Insta3.jpg"
                 alt="Instagram post 3"
                 className="social-image"
@@ -422,7 +428,8 @@ export default function ContactPage() {
 
             {/* Image 4 */}
             <a href="https://instagram.com" target="_blank">
-              <img
+              <Image
+                  height="400"                width="400"
                 src="/Insta.jpg"
                 alt="Instagram post 4"
                 className="social-image"
