@@ -10,5 +10,4 @@ const nextConfig = {
   assetPrefix: isProd ? '/growmytherapy-assignment/' : '',
 };
 
-
 module.exports = nextConfig;
