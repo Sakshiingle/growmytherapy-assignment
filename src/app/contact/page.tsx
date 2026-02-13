@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from 'next/image';
+import Link from "next/link";
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -18,164 +19,78 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Contact Hero Section */}
-      <section style={{ backgroundColor: "#f4efe8", padding: "50px 50px" }}>
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0px 70px",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "50px",
-            alignItems: "start",
-          }}
-        >
-          {/* LEFT: Text + CTA */}
-          <div>
-            <h1
-              style={{
-                fontSize: "48px", // text-5xl
-                fontWeight: "bold", // font-heading
-                color: "#350905",
-                lineHeight: 1, // leading-tight
-                marginBottom: "24px", // mb-6
-                fontFamily: "serif",
-              }}
-            >
-              Feeling Overwhelmed? Let's Start Healing
-            </h1>
+{/* Contact Hero - Images locked ALL devices */}
+<section className="bg-[#f4efe8] py-12 md:py-16 lg:py-20 px-4 md:px-12 lg:px-20 xl:px-[calc(50px+70px/2)]">
+  <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+    
+    {/* Text + CTA */}
+    <div className="order-1 lg:order-1 text-center lg:text-left">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-serif font-bold text-[#350905] mb-4 md:mb-6 leading-tight">
+        Feeling Overwhelmed? Let's Start Healing
+      </h1>
+      
+      <p className="text-base md:text-lg text-[#060606] max-w-md mx-auto lg:mx-0 mb-6 md:mb-8 leading-relaxed">
+        Struggling with anxiety, relationships, or life changes? I'm here
+        with compassionate therapy. Book a free 15-minute consult to see
+        if we're a good fit—no commitment needed.
+      </p>
 
-            <p
-              style={{
-                fontSize: "18px", // text-lg
-                color: "#060606",
-                maxWidth: "28rem", // max-w-md
-                marginBottom: "32px", // mb-8
-                lineHeight: "1.5",
-              }}
-            >
-              Struggling with anxiety, relationships, or life changes? I'm here
-              with compassionate therapy. Book a free 15-minute consult to see
-              if we're a good fit—no commitment needed.
-            </p>
+      <Link
+        href="https://formdr.com/your-secure-form"
+        className="
+          inline-block border-2 border-[#350905]
+          px-6 py-3 md:px-8 md:py-4
+          font-semibold text-[#350905] text-lg
+          hover:bg-[#803E39] hover:border-[#803E39] hover:text-white
+          active:bg-[#6b332e] active:scale-95
+          transition-all duration-300 ease-in-out
+          shadow-md hover:shadow-xl hover:-translate-y-1
+          rounded-lg whitespace-nowrap
+          focus:outline-none focus:ring-4 focus:ring-[#350905]/30
+        "
+      >
+        Book Free Consult Now
+      </Link>
+    </div>
 
-            {/* CTA Button */}
-            <a
-              href="https://formdr.com/your-secure-form" // Update to your HIPAA form
-              style={{
-                display: "inline-block",
-                border: "2px solid #350905", // border-2 border-[#350905]
-                padding: "12px 32px", // py-3 px-8
-                fontSize: "18px",
-                fontWeight: "600",
-                transition: "all 0.3s ease", // transition
-                color: "#350905",
-                textDecoration: "none",
-                borderRadius: "8px",
-                cursor: "pointer",
-              }}
-              onMouseOver={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                e.currentTarget.style.backgroundColor = "#803E39";
-                e.currentTarget.style.borderColor = "#803E39";
-                e.currentTarget.style.color = "white";
-              }}
-              onMouseOut={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                e.currentTarget.style.backgroundColor = "transparent";
-                e.currentTarget.style.borderColor = "#350905";
-                e.currentTarget.style.color = "#350905";
-              }}
-              
-            >
-              Book Free Consult Now
-            </a>
-          </div>
+    {/* Images - LOCKED together ALL devices */}
+    <div className="order-2 lg:order-2 relative w-[320px] sm:w-90 md:w-100 lg:w-full h-100 md:h-112.5 lg:h-125 mx-auto lg:mx-0">
+      {/* Big arch */}
+      <div className="absolute inset-0 w-[320px] sm:w-90 md:w-95 lg:w-100 h-full rounded-t-[180px] overflow-hidden bg-[#ccc] border-4 border-[#350905]/95 -left-2 sm:-left-4 lg:left-0">
+        <Image
+          src="/contacthero2.jpg"
+          alt="Lilac flowers"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
-          {/* RIGHT: Arch Image AS IS */}
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-              height: "400px",
-              justifySelf: "end", // Align right
-            }}
-          >
-            {/* Big arch (Lilac flowers) - UNCHANGED */}
-            <div
-              style={{
-                position: "absolute",
-                left: "0",
-                top: "0",
-                width: "320px",
-                height: "400px",
-                borderRadius: "160px 160px 0 0",
-                overflow: "hidden",
-                backgroundColor: "#ccc",
-                border: "3px solid #350905db",
-              }}
-            >
-              <Image
-                height="400"                width="400"
-                src="/contacthero2.jpg"
-                alt="Lilac flowers"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </div>
+      {/* Circle - Fixed position + near original size */}
+      <div className="absolute right-2 sm:right-4 md:right-6 lg:right-0 bottom-2 sm:bottom-4 md:bottom-6 lg:bottom-0 w-65 sm:w-67.5 md:w-68.75 lg:w-70 h-65 sm:h-67.5 md:h-68.75 lg:h-70 rounded-full overflow-hidden bg-[#e5ddd2] border-[3px] md:border-4 border-[#e5ddd2] shadow-xl z-10 -mr-2 sm:-mr-3 md:-mr-4 lg:-mr-1">
+        <Image
+          src="/contacthero.jpg"
+          alt="White flowers"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+    </div>
+  </div>
 
-            {/* Circle (White flowers) - Kept for balance, move if unwanted */}
-            <div
-              style={{
-                position: "absolute",
-                right: "0",
-                bottom: "0px",
-                width: "280px",
-                height: "280px",
-                borderRadius: "50%",
-                overflow: "hidden",
-                backgroundColor: "#e5ddd2",
-                border: "5px solid #e5ddd2",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-              }}
-            >
-              <Image
-                height="400"                width="400"
-                src="/contacthero.jpg"
-                alt="White flowers"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </div>
-          </div>
-        </div>
+  {/* Brown Box */}
+  <div className="mt-12 md:mt-16 lg:mt-20 max-w-2xl mx-auto">
+    <div className="bg-[#803E39] text-white p-8 md:p-10 lg:p-12 rounded-2xl text-center shadow-2xl shadow-[#350905]/30">
+      <p className="text-base md:text-lg leading-relaxed">
+        <strong>Privacy First:</strong> Secure, HIPAA-compliant
+        connections only. Use the button above or email
+        [your-email@domain.com]. No health details until official intake.
+      </p>
+    </div>
+  </div>
+</section>
 
-        {/* BOX BELOW - Centered */}
-        <div
-          style={{
-            backgroundColor: "#803E39",
-            color: "white",
-            padding: "35px 40px",
-            borderRadius: "12px",
-            marginTop: "50px",
-            textAlign: "center",
-            maxWidth: "800px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            boxShadow: "0 8px 30px rgba(53,9,5,0.3)",
-          }}
-        >
-          <div>
-            <p
-              style={{
-                fontSize: "16px",
-                lineHeight: "1.6",
-                marginBottom: "15px",
-              }}
-            >
-              <strong>Privacy First:</strong> Secure, HIPAA-compliant
-              connections only.Use the button above or email
-              [your-email@domain.com]. No health details until official intake.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* BOOK APPOINTMENT SECTION */}
       <section style={{ backgroundColor: "#e5ddd2", padding: "50px 20px" }}>
