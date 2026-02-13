@@ -17,33 +17,34 @@ export default function BlogPage() {
 
   return (
     <>
-      {/* HERO */}
-      <section className="bg-[#f4efe8]">
-        <div className="max-w-1000 mx-auto px-30  flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <Image
-             height="500"
-             width="500"
-              src="/bloghero.jpg"
-              alt="Blog hero"
-              className="w-full max-w-[360px] rounded-t-full"
-            />
-          </div>
-          <div className="md:w-1/2">
-            <h1 className="text-5xl font-serif text-[#2f3b1f] mb-8">
-              The Lilac Blog
+      {/* HERO - Your EXACT desktop + mobile responsive */}
+<section className="bg-[#f4efe8] py-12 md:py-0 px-4 sm:px-8 md:px-20">
+  <div className="max-w-4xl mx-auto flex flex-col lg:flex-row items-center gap-10">
+    <div className="w-full lg:w-1/2 ">
+      <Image
+        height="400"
+        width="400"
+        src="/bloghero.jpg"
+        alt="Dr. Maya Reynolds Blog"
+        className="w-full max-w-90 border-3 border-[#350905] lg:max-w-90 rounded-t-full mx-auto lg:mx-0"
+      />
+    </div>
+    <div className="w-full lg:w-1/2 text-center lg:text-left px-4 lg:px-0">
+      <h1 className="text-5xl font-heading text-center text-[#350905] leading-tight mb-6">
+              Healing Notes with Dr. Maya
             </h1>
-            <p className="text-[#3f4a2c]">
-              My tiny corner of the internet where I talk about healing, heart,
-              and wholeness.
-            </p>
-          </div>
-        </div>
-      </section>
+      <p className="text-lg text-[#3e4a2b] text-center max-w-md mb-8 mx-auto">
+        A quiet space for reflections on anxiety, trauma healing, and the small shifts that help us feel whole again.
+        Supporting overwhelmed adults in Santa Monica with reflections on anxiety, trauma recovery, and emotional balance.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* GRID */}
-      <section className="bg-[#e7e2da] py-24">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+      <section className="bg-[#e7e2da] py-12 md:py-24 px-1 md:px-10">
+        <div className="max-w-7xl mx-auto px-6  grid md:grid-cols-2 gap-20">
           <div>
             <Image
              height="400"
@@ -52,10 +53,10 @@ export default function BlogPage() {
               alt="Post 1"
               style={{ width: "100%", height: "400px", objectFit: "cover" }}
             />
-            <p className="text-sm text-gray-600 mt-6 mb-2">3/11/19</p>
-            <h2 className="text-3xl font-serif text-[#2f3b1f] mb-4">
-              Blog Post One
-            </h2>
+            <p className="text-sm text-gray-600 mt-6 mb-2">3/10/25</p>
+            <h3 className="text-3xl md:text-3xl font-heading text-[#350905] leading-tight mb-6">
+              Small Shifts, Big Relief
+            </h3>
             <a href="#" className="underline">
               Read More
             </a>
@@ -69,10 +70,10 @@ export default function BlogPage() {
               alt="Post 2"
               style={{ width: "100%", height: "400px", objectFit: "cover" }}
             />
-            <p className="text-sm text-gray-600 mt-6 mb-2">3/11/19</p>
-            <h2 className="text-3xl font-serif text-[#2f3b1f] mb-4">
-              Blog Post Two
-            </h2>
+            <p className="text-sm text-gray-600 mt-6 mb-2">2/11/25</p>
+            <h3 className="text-3xl md:text-3xl font-heading text-[#350905] leading-tight mb-6">
+              When the Past Feels Present
+            </h3>
             <a href="#" className="underline">
               Read More
             </a>
@@ -86,10 +87,10 @@ export default function BlogPage() {
               alt="Post 3"
               style={{ width: "100%", height: "400px", objectFit: "cover" }}
             />
-            <p className="text-sm text-gray-600 mt-6 mb-2">3/11/19</p>
-            <h2 className="text-3xl font-serif text-[#2f3b1f] mb-4">
-              Blog Post Three
-            </h2>
+            <p className="text-sm text-gray-600 mt-6 mb-2">9/12/25</p>
+            <h3 className="text-3xl md:text-3xl font-heading text-[#350905] leading-tight mb-6">
+             The Courage to Feel
+            </h3>
             <a href="#" className="underline">
               Read More
             </a>
@@ -103,10 +104,10 @@ export default function BlogPage() {
               alt="Post 4"
               style={{ width: "100%", height: "400px", objectFit: "cover" }}
             />
-            <p className="text-sm text-gray-600 mt-6 mb-2">3/11/19</p>
-            <h2 className="text-3xl font-serif text-[#2f3b1f] mb-4">
-              Blog Post Four
-            </h2>
+            <p className="text-sm text-gray-600 mt-6 mb-2">10/1/26</p>
+            <h3 className="text-3xl md:text-3xl font-heading text-[#350905] leading-tight mb-6">
+              On Slowing Down
+            </h3>
             <a href="#" className="underline">
               Read More
             </a>
@@ -114,46 +115,99 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* SUBSCRIBE WITH THANK YOU */}
-      <section style={{backgroundColor: '#8a9365', padding: '100px 20px'}}>
-        <div style={{maxWidth: '900px', margin: '0 auto', border: '4px solid white', padding: '80px 40px', textAlign: 'center'}}>
-          
-          {!submitted ? (
-            <>
-              <h2 style={{fontSize: '48px', color: 'white', marginBottom: '20px', fontFamily: 'serif'}}>
-                Subscribe
-              </h2>
-              
-              <p style={{fontSize: '18px', color: 'white', marginBottom: '40px'}}>
-                Sign up with your email address to receive news and updates.
-              </p>
-              
-              <form onSubmit={handleSubmit} style={{display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '20px', flexWrap: 'wrap'}}>
-                <input 
-                  type="email" 
-                  placeholder="Email Address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  style={{width: '320px', padding: '15px 20px', fontSize: '16px'}}
-                />
-                <button type="submit" style={{padding: '15px 40px', backgroundColor: 'transparent', border: '2px solid white', color: 'white', fontSize: '14px', fontWeight: 'bold', cursor: 'pointer'}}>
-                  SIGN UP
-                </button>
-              </form>
-              
-              <p style={{fontSize: '14px', color: 'white'}}>
-                We respect your privacy.
-              </p>
-            </>
-          ) : (
-            <h2 style={{fontSize: '48px', color: 'white', fontFamily: 'serif'}}>
-              Thank you!
-            </h2>
-          )}
-          
-        </div>
-      </section>
+{/* SUBSCRIBE WITH THANK YOU - PERFECT */}
+<section style={{backgroundColor: '#8a9365', padding: '60px 15px', paddingBottom: '40px'}}>
+  <div style={{
+    maxWidth: '1000px', 
+    margin: '0 auto', 
+    border: '4px solid white', 
+    padding: '60px 30px', 
+    textAlign: 'center',
+    borderRadius: '12px'
+  }}>
+    
+    {!submitted ? (
+      <>
+        <h2 style={{
+          fontSize: 'clamp(32px, 8vw, 48px)', 
+          color: 'white', 
+          marginBottom: '20px', 
+          fontFamily: 'serif',
+          lineHeight: 1.2
+        }}>
+          Subscribe
+        </h2>
+        
+        <p style={{
+          fontSize: 'clamp(16px, 4vw, 18px)', 
+          color: 'white', 
+          marginBottom: '30px',
+          lineHeight: 1.6
+        }}>
+          Sign up with your email address to receive news and updates.
+        </p>
+        
+        <form onSubmit={handleSubmit} style={{
+          display: 'flex', 
+          gap: '12px', 
+          justifyContent: 'center', 
+          marginBottom: '20px', 
+          flexWrap: 'wrap',
+          maxWidth: '500px',
+          margin: '0 auto'
+        }}>
+          <input 
+            type="email" 
+            placeholder="Email Address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            style={{
+              width: '320px',
+              padding: '15px 20px', 
+              fontSize: 'clamp(14px, 4vw, 16px)',
+              color: 'white',
+              backgroundColor: 'rgba(255,255,255,0.1)',
+              border: '2px solid white',
+              borderRadius: '8px',
+              outline: 'none'
+            }}
+          />
+          <button type="submit" style={{
+            padding: '15px 40px', 
+            backgroundColor: 'transparent', 
+            border: '2px solid white', 
+            color: 'white', 
+            fontSize: 'clamp(14px, 3vw, 16px)', 
+            fontWeight: 'bold', 
+            cursor: 'pointer',
+            borderRadius: '8px'
+          }}>
+            SIGN UP
+          </button>
+        </form>
+        
+        <p style={{
+          fontSize: 'clamp(12px, 3vw, 14px)', 
+          color: 'white',
+          opacity: 0.9
+        }}>
+          We respect your privacy.
+        </p>
+      </>
+    ) : (
+      <h2 style={{
+        fontSize: 'clamp(32px, 8vw, 48px)', 
+        color: 'white', 
+        fontFamily: 'serif',
+        lineHeight: 1.2
+      }}>
+        Thank you!
+      </h2>
+    )}
+  </div>
+</section>
+
     </>
   );
 }
