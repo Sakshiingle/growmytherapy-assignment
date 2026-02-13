@@ -115,7 +115,7 @@ export default function ContactPage() {
             >
               <Image
                 height="400"                width="400"
-                src="/ContactHero2.jpg"
+                src="/contacthero2.jpg"
                 alt="Lilac flowers"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -138,7 +138,7 @@ export default function ContactPage() {
             >
               <Image
                 height="400"                width="400"
-                src="/ContactHero.jpg"
+                src="/contacthero.jpg"
                 alt="White flowers"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -400,7 +400,7 @@ export default function ContactPage() {
             <a href="https://instagram.com" target="_blank">
               <Image
                   height="400"                width="400"
-                src="/Insta1.jpg"
+                src="/insta1.jpg"
                 alt="Instagram post 1"
                 className="social-image"
               />
@@ -410,7 +410,7 @@ export default function ContactPage() {
             <a href="https://instagram.com" target="_blank">
               <Image
                   height="400"                width="400"
-                src="/Insta2.jpg"
+                src="/insta2.jpg"
                 alt="Instagram post 2"
                 className="social-image"
               />
@@ -420,7 +420,7 @@ export default function ContactPage() {
             <a href="https://instagram.com" target="_blank">
               <Image
                   height="400"                width="400"
-                src="/Insta3.jpg"
+                src="/insta3.jpg"
                 alt="Instagram post 3"
                 className="social-image"
               />
@@ -430,7 +430,7 @@ export default function ContactPage() {
             <a href="https://instagram.com" target="_blank">
               <Image
                   height="400"                width="400"
-                src="/Insta.jpg"
+                src="/insta.jpg"
                 alt="Instagram post 4"
                 className="social-image"
               />

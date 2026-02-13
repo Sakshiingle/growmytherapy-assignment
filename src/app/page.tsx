@@ -43,7 +43,7 @@ export default function Home() {
           <div className="md:w-1/2 w-full flex justify-center md:justify-self-end">
             <div className="rounded-t-full border-3 border-[#350905] shadow-md overflow-hidden transition hover:shadow-xl">
               <Image
-                src="/Hero2.jpg"
+                src="/hero2.jpg"
                 alt="Therapy session in Santa Monica"
                 width={300}
                 height={500}
@@ -135,7 +135,7 @@ export default function Home() {
           <div className="relative w-full h-full rounded-lg overflow-hidden">
             <Image
               // Unsplash image URL
-              src="/About.jpg"
+              src="/about.jpg"
               alt="Calm lifestyle"
               fill
               // Makes image cover container like template
@@ -337,7 +337,7 @@ export default function Home() {
           {/* SERVICE 1 */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <img
-              src="/Therapy1.jpg"
+              src="/therapy1.jpg"
               alt="Anxiety Therapy Session"
               className="rounded-xl shadow-md w-full h-[400px] object-cover"
             />
@@ -380,7 +380,7 @@ export default function Home() {
               </a>
             </div>
             <img
-              src="/Therapy2.jpg"
+              src="/therapy2.jpg"
               alt="Trauma Therapy Illustration"
               className="rounded-xl shadow-md w-full h-[400px] object-cover order-1 md:order-2"
             />
@@ -389,7 +389,7 @@ export default function Home() {
           {/* SERVICE 3 */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <img
-              src="/Therapy8.jpg"
+              src="/therapy8.jpg"
               alt="Burnout Therapy Session"
               className="rounded-xl shadow-md w-full h-[400px] object-cover"
             />
@@ -432,7 +432,7 @@ export default function Home() {
               </a>
             </div>
             <img
-              src="/Therapy3.jpg"
+              src="/therapy3.jpg"
               alt="Calm Therapy Room"
               className="rounded-xl shadow-md w-full h-[400px] object-cover order-1 md:order-2"
             />
@@ -579,7 +579,7 @@ export default function Home() {
     {/* LEFT IMAGE */}
     <div className="rounded-t-full overflow-hidden shadow-md">
       <img
-        src="/WhyTherapy2.jpg"
+        src="/whytherapy2.jpg"
         alt="Calm therapy office plant"
         className="w-full h-[500px] object-cover"
       />
