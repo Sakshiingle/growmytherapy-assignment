@@ -36,114 +36,112 @@ export default function Home() {
 
   return (
     <>
-      {/* ================= HERO SECTION ================= */}
-      <section className="bg-[#f4efe8]">
-        <div className="max-w-7xl mx-auto px-20 py-[25px_0px] flex flex-col md:flex-row items-center gap-0">
-          {/* LEFT — Image */}
-          <div className="md:w-1/2 w-full flex justify-center md:justify-self-end">
-            <div className="rounded-t-full border-3 border-[#350905] shadow-md overflow-hidden transition hover:shadow-xl">
-              <Image
-                src="/hero2.jpg"
-                alt="Therapy session in Santa Monica"
-                width={300}
-                height={500}
-                className="object-cover"
-                priority
-              />
-            </div>
-          </div>
+     {/* HERO - Desktop exact + mobile fixed */}
+{/* HERO - Mobile image top + desktop left */}
+<section className="bg-[#f4efe8] py-8 md:py-6.25 px-4 md:px-20">
+  <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-0">
+    
+    {/* IMAGE - Mobile top, desktop right */}
+    <div className="w-full lg:w-1/2 order-1 lg:order-2 flex justify-center lg:justify-self-end">
+      <div className="rounded-t-full border-3 border-[#350905] shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+        <Image
+          src="/hero2.jpg"
+          alt="Therapy session in Santa Monica"
+          width={300}
+          height={500}
+          className="w-full h-70 md:h-100 lg:h-125 object-cover"
+          priority
+        />
+      </div>
+    </div>
 
-          {/* RIGHT — Content */}
-          <div className="md:w-1/2 w-full text-left">
-            <h1 className="text-5xl font-heading text-[#350905] leading-tight mb-6">
-              Therapy for Anxiety, Trauma & Burnout in Santa Monica
-            </h1>
+    {/* CONTENT - Mobile below image, desktop left */}
+    <div className="w-full lg:w-1/2 order-2 lg:order-1 text-center lg:text-left px-2 lg:px-0">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading text-[#350905] leading-tight mb-4 md:mb-6">
+        Therapy for Anxiety, Trauma & Burnout in Santa Monica
+      </h1>
 
-            <p className="text-lg text-[#3e4a2b] max-w-md mb-8">
-              Evidence-based, depth-oriented therapy for high-achieving adults
-              who feel overwhelmed, stuck, or emotionally exhausted.
-            </p>
+      <p className="text-base md:text-lg text-[#3e4a2b] max-w-md mx-auto lg:mx-0 mb-6 md:mb-8 leading-relaxed">
+        Evidence-based, depth-oriented therapy for high-achieving adults
+        who feel overwhelmed, stuck, or emotionally exhausted.
+      </p>
 
-            <Link
-              href="/contact#appointment"
-              className="
-    inline-block
-    border-2 border-[#350905]
-    px-8 py-3
-    transition
-    hover:bg-[#803E39]
-    hover:border-[#803E39]
-    hover:text-white
-  "
-            >
-              Schedule a Consultation →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* About SECTION*/}
-      <section
-        // Light beige background like the template
-        className="bg-[#f4f1e3] py-20"
+      <Link
+        href="/contact#appointment"
+        className="
+          inline-block
+          border-2 border-[#350905]
+          px-6 py-3 md:px-8 md:py-3.75
+          font-medium text-[#350905]
+          hover:bg-[#803E39] hover:border-[#803E39] hover:text-white
+          active:bg-[#6b3d32]
+          transition-all duration-300 ease-in-out
+          focus:outline-none focus:ring-4 focus:ring-[#350905]/20
+          rounded-lg shadow-md hover:shadow-lg
+          whitespace-nowrap
+        "
       >
-        {/* Centered container with max width */}
-        <div className="max-w-7xl mx-auto px-20 py-0 grid md:grid-cols-2 gap-16 items-center">
-          {/* LEFT SIDE: Text content */}
-          <div>
-            {/* Section heading */}
-            <h2 className="text-7xl md:text-5xl font-serif font-semibold text-[#350905] mb-6">
-              About Dr.Maya Reynolds
-            </h2>
+        Schedule a Consultation →
+      </Link>
+    </div>
+  </div>
+</section>
 
-            {/* First paragraph */}
-            <p className="text-lg text-black-700 mb-4">
-              I’m a licensed clinical psychologist based in Santa Monica,
-              California, offering therapy for adults navigating anxiety,
-              trauma, burnout, and high internal pressure.
-            </p>
+      {/* About SECTION - Desktop exact + mobile */}
+<section className="bg-[#f4f1e3] py-12 md:py-20 px-4 md:px-20">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+    
+    {/* LEFT SIDE: Text content */}
+    <div className="order-2 lg:order-1 text-center lg:text-left">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-serif font-semibold text-[#350905] mb-4 md:mb-6 leading-tight">
+        About Dr. Maya Reynolds
+      </h2>
 
-            {/* Second paragraph */}
-            <p className="text-lg text-black-700 mb-8">
-              Many of the people I work with are high-achieving and
-              self-aware—but internally feel exhausted, stuck in overthinking,
-              or emotionally on edge. My approach is warm, collaborative, and
-              grounded. I integrate evidence-based methods including CBT, EMDR,
-              mindfulness practices, and body-oriented techniques to address
-              both emotional and physiological stress responses. I offer
-              in-person therapy from my Santa Monica office and secure
-              telehealth sessions throughout California.
-            </p>
+      <p className="text-base md:text-lg text-[#2f3b1f] mb-3 md:mb-4 leading-relaxed">
+        I'm a licensed clinical psychologist based in Santa Monica,
+        California, offering therapy for adults navigating anxiety,
+        trauma, burnout, and high internal pressure.
+      </p>
 
-            <Link
-              href="/contact#appointment"
-              className="
-    inline-block
-    border-2 border-[#350905]
-    px-4 py-2
-    transition
-    hover:bg-[#803E39]
-    hover:border-[#803E39]
-    hover:text-white
-  "
-            >
-              Get In Touch →
-            </Link>
-          </div>
+      <p className="text-base md:text-lg text-[#2f3b1f] mb-6 md:mb-8 leading-relaxed">
+        Many of the people I work with are high-achieving and
+        self-aware—but internally feel exhausted, stuck in overthinking,
+        or emotionally on edge. My approach is warm, collaborative, and
+        grounded. I integrate evidence-based methods including CBT, EMDR,
+        mindfulness practices, and body-oriented techniques to address
+        both emotional and physiological stress responses. I offer
+        in-person therapy from my Santa Monica office and secure
+        telehealth sessions throughout California.
+      </p>
 
-          {/* RIGHT SIDE: Image */}
-          <div className="relative w-full h-full rounded-lg overflow-hidden">
-            <Image
-              // Unsplash image URL
-              src="/about.jpg"
-              alt="Calm lifestyle"
-              fill
-              // Makes image cover container like template
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
+      <Link
+        href="/contact#appointment"
+        className="
+          inline-block border-2 border-[#350905]
+          px-6 py-3 md:px-8 md:py-3.75
+          font-medium text-[#350905]
+          hover:bg-[#803E39] hover:border-[#803E39] hover:text-white
+          transition-all duration-300 ease-in-out shadow-md hover:shadow-lg
+          rounded-lg whitespace-nowrap
+        "
+      >
+        Get In Touch →
+      </Link>
+    </div>
+
+    {/* RIGHT SIDE: Image */}
+    <div className="order-1 lg:order-2 w-full h-75 md:h-100 lg:h-125 relative rounded-lg overflow-hidden mx-auto lg:mx-0 shadow-xl">
+      <Image
+        src="/images/about.jpg"
+        alt="Dr. Maya Reynolds"
+        fill
+        className="object-cover hover:scale-105 transition-all duration-500"
+        priority
+      />
+    </div>
+  </div>
+</section>
+
 
       {/* ================= Our SPECIALTIES - DR. MAYA ================= */}
       <section
