@@ -1,19 +1,40 @@
-# Lilac Therapy Website (Next.js + Tailwind)
+# 🌿 Lilac Therapy Website (Next.js + Tailwind)
 
-This project is a **custom-built therapy website** inspired by the *Lilac Template* design style.  
-It is developed using **Next.js (App Router)** and **Tailwind CSS**, focusing on clean layout structure, responsive design, and reusable components.
-
-The project is built step-by-step with an emphasis on **layout correctness before visual polish**, following real-world frontend development practices.
+Live Website:  
+https://grow-my-therapy-assignment.netlify.app/
 
 ---
 
-## 🌱 Project Goals
+## 📌 Project Overview
 
-- Recreate a modern therapy website layout similar to Squarespace’s Lilac template
-- Practice **Next.js App Router** concepts
-- Build reusable global layout (header + footer)
-- Implement responsive hero sections with controlled image layouts
-- Follow clean Git commit practices
+This project is a **custom-built therapy website** inspired by the Lilac design style.
+
+It is developed using:
+
+- **Next.js 14 (App Router)**
+- **React**
+- **Tailwind CSS**
+
+The project focuses on:
+
+- Clean layout structure
+- Responsive design
+- Reusable global components
+- Controlled image layouts
+- Proper deployment workflow
+
+The website is deployed on **Netlify** with automatic deployment from GitHub.
+
+---
+
+## 🎯 Project Goals
+
+- Recreate a modern therapy website layout
+- Practice Next.js App Router structure
+- Implement reusable global layout (Header + Footer)
+- Build responsive hero sections with controlled images
+- Implement blog routing
+- Deploy a production-ready site
 
 ---
 
@@ -24,28 +45,29 @@ The project is built step-by-step with an emphasis on **layout correctness befor
 - **Tailwind CSS**
 - **next/image**
 - **next/link**
+- **Netlify (Deployment)**
 
 ---
 
 ## 📂 Folder Structure
 src/app/
-├── layout.tsx # Global layout (header + footer)
+├── layout.tsx # Global layout (Header + Footer)
 ├── page.tsx # Home page
 ├── blog/
-│ └── page.tsx # Blog page
+│ ├── page.tsx # Blog listing page
+│ └── [slug]/ # Dynamic blog post route
+│ └── page.tsx
 ├── contact/
 │ └── page.tsx # Contact page
 └── globals.css
-
-
 ---
 
 ## 🌍 Global Layout
 
 - Header and Footer are defined in `layout.tsx`
-- Automatically shared across all pages
-- Navigation handled with `next/link`
-- Consistent background color and spacing
+- Shared automatically across all pages
+- Navigation handled using `next/link`
+- Consistent spacing and background styling
 
 ---
 
@@ -55,34 +77,57 @@ src/app/
 - Text and call-to-action aligned per template inspiration
 - Responsive layout (stacked on mobile)
 
+Features:
+- Arch-shaped hero image
+- Responsive flex layout
+- Call-to-action button
+- Structured sections
+- Mobile-first responsive behavior
+
 ---
 
-## 📝 Blog Page (In Progress)
-
+## 📝 Blog Page 
 ### Implemented
-- Blog route (`/blog`)
-- Blog hero section
-- Two-column layout:
-  - Left: arch-shaped constrained image
-  - Right: blog heading and description
-- Responsive behavior:
-  - Desktop: image + text side by side
-  - Mobile: stacked layout
 
-### Planned
-- Blog post list/cards
-- Individual blog post pages
+- `/blog` route
+- Blog hero section
+- Two-column blog layout
+- Fixed-height responsive blog cards
+- Dynamic routing (`/blog/[slug]`)
+- Responsive grid layout
+
+### Planned Improvements
+
+- Real blog content
 - Typography refinement
+- SEO improvements
+- Metadata optimization
+
+
 
 ---
 
 ## 📱 Responsive Design
 
 - Mobile-first approach
-- Flexbox layout with Tailwind utilities
-- Image scaling controlled via wrapper containers
-- No full-width image overflow
+- Tailwind utility-based layout
+- Grid + Flexbox structure
+- Image containers prevent layout shift
+- Consistent spacing system
 
+---
+## 🚀 Deployment
+
+The project is deployed on **Netlify**.
+
+Features:
+
+- Connected to GitHub repository
+- Automatic deployment on push
+- Production build optimization enabled
+
+Live URL:  
+https://grow-my-therapy-assignment.netlify.app/
 ---
 
 ## 🚀 How to Run Locally
