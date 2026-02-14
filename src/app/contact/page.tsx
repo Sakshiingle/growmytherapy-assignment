@@ -201,81 +201,46 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* MY OFFICE SECTION */}
-      <section
-        id="my-office"
-        style={{ backgroundColor: "#8a9365", padding: "25px" }}
-      >
-        <div
-          style={{
-            maxWidth: "1400px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            minHeight: "500px",
-          }}
-        >
-          {/* LEFT COLUMN - Office Info */}
-          <div
-            style={{
-              padding: "80px 60px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              color: "white",
-            }}
-          >
-            <h2 className="text-7xl md:text-5xl font-serif font-semibold text-white mb-6">
-              My Office
-            </h2>
+      {/* My Office - Mobile responsive */}
+<section id="my-office" className="bg-[#8a9365] py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-6.25">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-112.5 md:min-h-125">
+    
+    {/* LEFT: Office Info - Mobile top */}
+<div className="lg:col-span-1 order-1 lg:order-1 p-6 md:p-12 lg:p-20 flex flex-col justify-center text-white text-center md:text-left">
+  <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-[7xl] font-serif font-semibold text-white mb-4 md:mb-6 leading-tight">
+    My Office
+  </h2>
 
-            <div
-              style={{
-                fontSize: "20px",
-                lineHeight: "1.8",
-                marginBottom: "40px",
-              }}
-            >
-              <p style={{ marginBottom: "10px" }}>123th Street 45 W</p>
-              <p>Santa Monica, CA 90401</p>
-            </div>
+  <div className="text-lg md:text-xl lg:text-[20px] leading-[1.8] mb-6 md:mb-10 mx-auto md:mx-0 max-w-md md:max-w-none">
+    <p className="mb-2 md:mb-2.5">123th Street 45 W</p>
+    <p>Santa Monica, CA 90401</p>
+  </div>
 
-            <h3
-              style={{
-                fontSize: "32px",
-                fontWeight: "bold",
-                marginBottom: "20px",
-                fontFamily: "serif",
-              }}
-            >
-              Hours
-            </h3>
+  <h3 className="text-2xl md:text-3xl lg:text-[32px] font-bold font-serif mb-3 md:mb-5">
+    Hours
+  </h3>
 
-            <div style={{ fontSize: "20px", lineHeight: "1.8" }}>
-              <p style={{ marginBottom: "10px" }}>Monday – Friday</p>
-              <p>10am – 6pm</p>
-            </div>
-          </div>
+  <div className="text-lg md:text-xl lg:text-[20px] leading-[1.8] mx-auto md:mx-0 max-w-md md:max-w-none">
+    <p className="mb-2 md:mb-2.5">Monday – Friday</p>
+    <p>10am – 6pm</p>
+  </div>
+</div>
 
-          {/* RIGHT COLUMN - Google Map - Key-Free Santa Monica */}
-          <div style={{ position: "relative", minHeight: "500px" }}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.835248140013!2d-118.492758684629!3d34.021768480465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bcbb5d0b3f2b%3A0x123th+Street+45+W%2C+Santa+Monica%2C+CA+90401!2s123th%20Street%2045%20W%2C%20Santa%20Monica%2C%20CA%2090401!5e0!3m2!1sen!2sin!4v1739340000000!5m2!1sen!2sin"
-              style={{
-                position: "absolute",
-                top: "50px",
-                left: "0",
-                width: "90%",
-                height: "80%",
-                border: "none",
-              }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </section>
+
+    {/* RIGHT: Map - Mobile bottom */}
+    <div className="lg:col-span-1 order-2 lg:order-2 relative min-h-87.5 md:min-h-112.5 lg:min-h-125">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.835248140013!2d-118.492758684629!3d34.021768480465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bcbb5d0b3f2b%3A0x123th+Street+45+W%2C+Santa+Monica%2C+CA+90401!2s123th%20Street%2045%20W%2C%20Santa%20Monica%2C%20CA%2090401!5e0!3m2!1sen!2sin!4v1739340000000!5m2!1sen!2sin"
+        className="absolute inset-0 w-full h-full rounded-xl shadow-2xl"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        allowFullScreen
+      />
+    </div>
+  </div>
+</section>
+
+      
 
       {/* FIND ME ON SOCIAL SECTION */}
       <section style={{ backgroundColor: "#fbf7f1", padding: "40px 25px" }}>
