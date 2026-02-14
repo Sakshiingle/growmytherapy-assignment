@@ -204,14 +204,14 @@ export default function ContactPage() {
       {/* My Office - Mobile responsive */}
 <section id="my-office" className="bg-[#8a9365] py-8 md:py-12 lg:py-16 px-4 md:px-8 lg:px-6.25">
   <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-112.5 md:min-h-125">
-    
     {/* LEFT: Office Info - Mobile top */}
-<div className="lg:col-span-1 order-1 lg:order-1 p-6 md:p-12 lg:p-20 flex flex-col justify-center text-white text-center md:text-left">
+    {/* Office Info - Center mobile/iPad */}
+<div className="lg:col-span-1 order-1 lg:order-1 p-6 md:p-12 lg:p-20 flex flex-col justify-center text-white text-center lg:text-left">
   <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-[7xl] font-serif font-semibold text-white mb-4 md:mb-6 leading-tight">
     My Office
   </h2>
 
-  <div className="text-lg md:text-xl lg:text-[20px] leading-[1.8] mb-6 md:mb-10 mx-auto md:mx-0 max-w-md md:max-w-none">
+  <div className="text-lg md:text-xl lg:text-[20px] leading-[1.8] mb-6 md:mb-10 mx-auto lg:mx-0 max-w-md lg:max-w-none">
     <p className="mb-2 md:mb-2.5">123th Street 45 W</p>
     <p>Santa Monica, CA 90401</p>
   </div>
@@ -220,7 +220,7 @@ export default function ContactPage() {
     Hours
   </h3>
 
-  <div className="text-lg md:text-xl lg:text-[20px] leading-[1.8] mx-auto md:mx-0 max-w-md md:max-w-none">
+  <div className="text-lg md:text-xl lg:text-[20px] leading-[1.8] mx-auto lg:mx-0 max-w-md lg:max-w-none">
     <p className="mb-2 md:mb-2.5">Monday – Friday</p>
     <p>10am – 6pm</p>
   </div>
@@ -243,81 +243,61 @@ export default function ContactPage() {
       
 
       {/* FIND ME ON SOCIAL SECTION */}
-      <section style={{ backgroundColor: "#fbf7f1", padding: "40px 25px" }}>
-        <div style={{ maxWidth: "1400px", margin: "auto" }}>
-          <h2 className="text-7xl md:text-5xl text-center font-serif font-semibold text-[#350905] mb-6">
-            Find me on social
-          </h2>
+      {/* Social - 2x2 mobile/iPad + 4-col desktop */}
+<section className="bg-[#fbf7f1] py-10 md:py-12 lg:py-16 px-4 md:px-8 lg:px-6.25">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-[7xl] font-serif font-semibold text-[#350905] text-center mb-6 md:mb-8 leading-tight">
+      Find me on social
+    </h2>
 
-          {/* Add CSS for hover effect */}
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
-      .social-image {
-        width: 100%;
-        height: 320px;
-        object-fit: cover;
-        border-radius: 8px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .social-image:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-      }
-    `,
-            }}
-          />
+    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
+      {/* Image 1 */}
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="block group">
+        <Image
+          src="/insta1.jpg"
+          alt="Instagram post 1"
+          width={400}
+          height={320}
+          className="w-full h-50 md:h-60 lg:h-80 object-cover rounded-lg transition-all duration-300 group-hover:scale-[1.05] group-hover:shadow-2xl"
+        />
+      </a>
 
-          {/* 4-Column Gallery Grid */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
-              gap: "20px",
-            }}
-          >
-            {/* Image 1 */}
-            <a href="https://instagram.com" target="_blank">
-              <Image
-                  height="400"                width="400"
-                src="/insta1.jpg"
-                alt="Instagram post 1"
-                className="social-image"
-              />
-            </a>
+      {/* Image 2 */}
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="block group">
+        <Image
+          src="/insta2.jpg"
+          alt="Instagram post 2"
+          width={400}
+          height={320}
+          className="w-full h-50 md:h-60 lg:h-80 object-cover rounded-lg transition-all duration-300 group-hover:scale-[1.05] group-hover:shadow-2xl"
+        />
+      </a>
 
-            {/* Image 2 */}
-            <a href="https://instagram.com" target="_blank">
-              <Image
-                  height="400"                width="400"
-                src="/insta2.jpg"
-                alt="Instagram post 2"
-                className="social-image"
-              />
-            </a>
+      {/* Image 3 */}
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="block group">
+        <Image
+          src="/insta3.jpg"
+          alt="Instagram post 3"
+          width={400}
+          height={320}
+          className="w-full h-50 md:h-60 lg:h-80 object-cover rounded-lg transition-all duration-300 group-hover:scale-[1.05] group-hover:shadow-2xl"
+        />
+      </a>
 
-            {/* Image 3 */}
-            <a href="https://instagram.com" target="_blank">
-              <Image
-                  height="400"                width="400"
-                src="/insta3.jpg"
-                alt="Instagram post 3"
-                className="social-image"
-              />
-            </a>
+      {/* Image 4 */}
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="block group">
+        <Image
+          src="/insta4.jpg"
+          alt="Instagram post 4"
+          width={400}
+          height={320}
+          className="w-full h-50 md:h-60 lg:h-80 object-cover rounded-lg transition-all duration-300 group-hover:scale-[1.05] group-hover:shadow-2xl"
+        />
+      </a>
+    </div>
+  </div>
+</section>
 
-            {/* Image 4 */}
-            <a href="https://instagram.com" target="_blank">
-              <Image
-                  height="400"                width="400"
-                src="/insta.jpg"
-                alt="Instagram post 4"
-                className="social-image"
-              />
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* Divider */}
       <div
